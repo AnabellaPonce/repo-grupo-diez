@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1 Rem = 10px */
+}
+
+body {
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+
+nav .navbar-brand {
+    font-size: 2.5rem;
+}
+
+nav .nav-link {
+    font-size: 2rem;
+}

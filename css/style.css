@@ -1,3 +1,5 @@
+/* GLOBALES */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,15 @@ body {
     overflow-x: hidden;
 }
 
+/* CONTENEDOR */
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+
 nav .navbar-brand {
     font-size: 2.5rem;
 }
@@ -20,6 +31,8 @@ nav .navbar-brand {
 nav .nav-link {
     font-size: 2rem;
 }
+
+/* HEADER */
 
 .header {
     height: 100vh;
@@ -57,4 +70,52 @@ nav .nav-link {
 .header-content h1 {
     font-size: 4rem;
     font-weight: bold;
+}
+
+
+/* QUE HACEMOS */
+
+.que-hacemos {
+    margin-top: 10rem;
+}
+
+.eventos {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.card {
+    border: none;
+}
+
+.card img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h3 {
+    background-color: #b222bf;
+    height: 6rem;
+    line-height: 3rem;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.card h3:hover {
+    background-color: #a907b8;
+}
+
+/* QUIENES SOMOS */
+
+.quienes-somos {
+    margin-top: 10rem;
+}
+
+.quienes-somos p {
+    font-size: 1.9rem;
 }

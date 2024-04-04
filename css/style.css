@@ -74,7 +74,7 @@ nav .nav-link {
 
 
 .header-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 
@@ -143,6 +143,7 @@ nav .nav-link {
 footer {
     height: 80px;
     background-color: #262929;
+    margin-top: 20rem; /* Quitar después */
 }
 
 .texto-footer {

@@ -1,3 +1,5 @@
+/* Import de fuentes */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto');
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,8 @@ html {
 body {
     line-height: 1.5;
     overflow-x: hidden;
+   
+
 }
 
 nav .navbar-brand {
@@ -20,3 +24,162 @@ nav .navbar-brand {
 nav .nav-link {
     font-size: 2rem;
 }
+
+
+
+:root {
+    --size: 30px; /* Tamaño */
+    --resize: 0.7; /* Redimencionamiento */
+    --fig-width: 10.5em; /* Ancho contenedor fotografía */
+    --fig-height: 12.25em; /* Alto contenedor fotografía */
+    --photo-size: 9.25em; /* Tamaño fotografía */
+    --font-size: 1em; /* Tamaño fuente */
+  }
+  
+  *,
+  *::before,
+  *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  
+  .vintalight {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 97%;
+      max-width: 1200px;
+      padding: 50px 0;
+      background-color: #f2f2f2;
+  }
+  
+  .vintalight__container {
+      position: relative;
+      width: 90%;
+      max-width: var(--fig-width);
+      height: var(--fig-height);
+      background-color: #fff;
+      font-size: var(--size);
+      box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
+  }
+  
+  .vintalight__container:nth-child(1) {
+      transform: translate(40px, 30px) rotate(-30deg);
+      z-index: 40;
+  }
+  
+  .vintalight__container:nth-child(1):hover {
+      transform: scale(1.15) translate(40px, 30px) rotate(0);
+  }
+  
+  .vintalight__container:nth-child(2) {
+      transform: translate(30px, 20px) rotate(7deg);
+      z-index: 50;
+  }
+  
+  .vintalight__container:nth-child(2):hover {
+      transform: scale(1.15) translate(30px, 20px) rotate(0);
+  }
+  
+  .vintalight__container:nth-child(3) {
+      transform: translate(-20px, 20px) rotate(20deg);
+      z-index: 40;
+  }
+  
+  .vintalight__container:nth-child(3):hover {
+      transform: scale(1.15) translate(-20px, 20px) rotate(0);
+  }
+  
+  .vintalight__container:nth-child(4) {
+      transform: translate(40px, -10px) rotate(10deg);
+      z-index: 30;
+  }
+  
+  .vintalight__container:nth-child(4):hover {
+      transform: scale(1.15) translate(40px, -10px) rotate(0);
+  }
+  
+  .vintalight__container:nth-child(5) {
+      transform: translate(30px, -20px) rotate(-20deg);
+      z-index: 20;
+  }
+  
+  .vintalight__container:nth-child(5):hover {
+      transform: scale(1.15) translate(30px, -20px) rotate(0);
+  }
+  
+  .vintalight__container:nth-child(6) {
+      transform: translate(30px, -40px) rotate(-10deg);
+      z-index: 40;
+  }
+  
+  .vintalight__container:nth-child(6):hover {
+      transform: scale(1.15) translate(30px, -40px) rotate(0);
+  }
+  
+  .vintalight__container:hover {
+      box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+  }
+  
+  .vintalight__container.active,
+  .vintalight__container.active:hover {
+      transform: rotate(0) scale(1.25);
+  }
+  
+  .vintalight__container.active {
+      position: relative;
+  }
+  
+  .vintalight__photo {
+      position: relative;
+      width: var(--photo-size);
+      height: var(--photo-size);
+      margin: calc((var(--fig-width) - var(--photo-size)) / 2) auto 0;
+      overflow: hidden;
+      cursor: pointer;
+  }
+  
+  .vintalight__photo::before {
+      content: "Ver foto";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: var(--font-size);
+      font-family: var(--font-view);
+      transform: scale(0);
+      transition: all 0.25s;
+  }
+  
+  .vintalight__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .vintalight__caption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: calc((var(--fig-height) - var(--photo-size)) - ((var(--fig-width) - var(--photo-size)) / 2));
+  }
+  
+  .vintalight__text {
+      color: #222;
+      font-size: var(--font-size);
+      font-family: var(--font-description);
+  }
+  
+  .vintalight-overlay {
+      display: flex;
+     
+  }

@@ -15,6 +15,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /* CONTENEDOR */
 
 .container {
@@ -114,7 +115,7 @@ nav .nav-link {
 
 .quienes-somos {
     margin-top: 10rem;
-    background-color: #c9c9c9;
+    background-color: #f2f2f2;
     padding: 10rem;
 }
 
@@ -144,4 +145,36 @@ footer p {
     color: white;
     margin: 0;
     font-size: 1.3rem;
+}
+
+
+/* SERVICIOS */
+
+.servicios {
+    margin-top: 7rem;
+}
+
+.servicios h2 {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.servicios-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.servicios-icons {
+    text-align: center;
+}
+
+.card-serv img {
+    filter: invert(21%) sepia(76%) saturate(3668%) hue-rotate(285deg) brightness(86%) contrast(95%);
+    height: 5rem;
+    margin: 2rem;
+}
+
+.card-serv h3 {
+    margin-top: 1.5rem;
 }

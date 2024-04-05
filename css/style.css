@@ -75,7 +75,10 @@ nav .nav-link {
 
 .header-content h1 {
     font-size: 5rem;
-    font-weight: bold;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
 }
 
 
@@ -104,6 +107,10 @@ nav .nav-link {
 
 .card h3 {
     background-color: var(--principal);
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     height: 6rem;
     line-height: 3rem;
     color: white;
@@ -128,12 +135,20 @@ nav .nav-link {
 .quienes-somos h2 {
     text-align: center;
     display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
     margin-bottom: 3rem;
     border-bottom: 2px solid var(--principal);
     padding-bottom: 1rem;
 }
 
 .quienes-somos p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.9rem;
     text-align: center;
 }
@@ -167,6 +182,11 @@ footer p {
 
 .servicios h2 {
     display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
     margin-top: 4rem;
     margin-bottom: 8rem;
     border-bottom: 2px solid var(--principal);

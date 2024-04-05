@@ -10,3 +10,10 @@ Color navbar - footer: #262929;
 Páginas para sacar imagenes: 
 https://www.pexels.com/es-es/
 https://unsplash.com/es
+
+
+Fuente para títulos: "DM Sans" , sans-serif;
+
+
+Fuente para texto: "Lato", sans-serif;
+

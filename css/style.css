@@ -159,6 +159,7 @@ nav .nav-link {
 
 .servicios {
     margin-top: 10rem;
+    margin-bottom: 20rem;
     text-align: center;
 }
 
@@ -197,7 +198,7 @@ nav .nav-link {
 /* UBICACIÓN */
 
 .ubicacion {
-    margin-top: 10rem;
+    margin-top: 20rem;
     background-color: var(--separador);
     text-align: center;
 }
@@ -209,11 +210,11 @@ nav .nav-link {
     font-weight: 900;
     font-style: normal;
     font-size: 3rem;
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 8rem;
     border-bottom: 2px solid var(--principal);
     padding-bottom: 1rem;
-    padding-top: 2rem;
+    padding-top: 8rem;
     
 }
 

@@ -153,30 +153,12 @@ nav .nav-link {
     text-align: center;
 }
 
-/* FOOTER */
-
-footer {
-    height: 80px;
-    background-color: #262929;
-    margin-top: 20rem; /* Quitar después */
-}
-
-.texto-footer {
-    padding-top: 2rem;
-}
-
-footer p {
-    text-align: center;
-    color: white;
-    margin: 0;
-    font-size: 1.3rem;
-}
 
 
 /* SERVICIOS */
 
 .servicios {
-    margin-top: 7rem;
+    margin-top: 10rem;
     text-align: center;
 }
 
@@ -210,4 +192,46 @@ footer p {
 
 .card-serv h3 {
     margin-top: 1.5rem;
+}
+
+/* UBICACIÓN */
+
+.ubicacion {
+    margin-top: 10rem;
+    background-color: var(--separador);
+    text-align: center;
+}
+
+.ubicacion h3{
+    display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    border-bottom: 2px solid var(--principal);
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 80px;
+    background-color: #262929;
+}
+
+.texto-footer {
+    padding-top: 2rem;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 1.3rem;
 }

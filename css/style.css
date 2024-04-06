@@ -304,3 +304,12 @@ footer p {
     color: var(--principal);
     margin-bottom: 1rem;
 }
+
+.iconos-footer {
+    font-size: 1.8rem;
+}
+
+.iconos-footer a {
+    color: #fff;
+    padding-right: 0.5rem;
+}

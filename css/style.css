@@ -222,7 +222,7 @@ nav .nav-link {
 /* FOOTER */
 
 footer {
-    height: 180px;
+    height: 220px;
     background-color: #262929;
 }
 
@@ -271,6 +271,7 @@ footer p {
     display: block;
 }
 
+
 .paginas-footer h3 {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
@@ -312,4 +313,17 @@ footer p {
 .iconos-footer a {
     color: #fff;
     padding-right: 0.5rem;
+}
+
+.copyright {
+    background-color: #262929;
+}
+
+.texto-copy {
+    padding-top: 2rem;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 1.1rem;
 }

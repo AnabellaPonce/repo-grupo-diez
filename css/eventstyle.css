@@ -33,7 +33,7 @@ nav .nav-link {
     --fig-width: 10.5em; /* Ancho contenedor fotografía */
     --fig-height: 12.25em; /* Alto contenedor fotografía */
     --photo-size: 9.25em; /* Tamaño fotografía */
-    --font-size: 1em; /* Tamaño fuente */
+    --font-size: 0.80em; /* Tamaño fuente */
   }
   
   *,
@@ -177,6 +177,7 @@ nav .nav-link {
       color: #222;
       font-size: var(--font-size);
       font-family: var(--font-description);
+      text-align: center;
   }
   
   .vintalight-overlay {

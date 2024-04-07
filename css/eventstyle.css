@@ -13,6 +13,7 @@ html {
 body {
     line-height: 1.5;
     overflow-x: hidden;
+    background-color: #f2f2f2;
    
 
 }
@@ -28,12 +29,13 @@ nav .nav-link {
 
 
 :root {
-    --size: 30px; /* Tamaño */
+    --size: 25px; /* Tamaño */
     --resize: 0.7; /* Redimencionamiento */
     --fig-width: 10.5em; /* Ancho contenedor fotografía */
     --fig-height: 12.25em; /* Alto contenedor fotografía */
     --photo-size: 9.25em; /* Tamaño fotografía */
     --font-size: 0.80em; /* Tamaño fuente */
+    --separador: #f2f2f2c5;
   }
   
   *,
@@ -49,10 +51,10 @@ nav .nav-link {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      width: 97%;
+      width: 70%;
       max-width: 1200px;
       padding: 50px 0;
-      background-color: #f2f2f2;
+      margin: auto;
   }
   
   .vintalight__container {

@@ -30,13 +30,24 @@
 
      <header>CONTACTANOS</header>
 
-     <form id="form" class="topBefore">
-         
-           <input id="name" type="text" placeholder="NOMBRE">
-           <input id="email" type="text" placeholder="E-MAIL">
-           <textarea id="message" type="text" placeholder="MENSAJE"></textarea>
-       <input id="submit" type="submit" value="ENVIAR">
+     <form id="form" class="topBefore" action="https://formspree.io/f/xvoevaly"
+             method="POST">
+       <label>
+           <input id="name" type="text" name="name" placeholder="NOMBRE">
+        </label>
+        <label>    
+           <input id="email" type="text" name="email" placeholder="E-MAIL">
+        </label>
+        <label>   
+           <input id="celular" type="text" name="celular" placeholder="CELULAR">
+        </label>  
+        <label>
+           <textarea id="message" type="text" name="mensaje" placeholder="MENSAJE"></textarea>
+        </label>  
+        <div class="btnenv"> <input id="submit" type="submit" value="ENVIAR"> </div>
        
-     </form>
+       
+      </form>
+      <script src="./JS/contactate.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 62.5%; /* 1 Rem = 10px */
 }
@@ -11,6 +12,14 @@ html {
 body {
     line-height: 1.5;
     overflow-x: hidden;
+}
+
+:root {--principal:#b222bf ; /* Color principal (rosa) */
+  --separador: #f2f2f2; /* Color separador (blanco marfil) */
+  --navbar-footer: #262929; /* Color navbar-footer */
+  --background-color: #d8c1dfad; /* Color de fondo */
+  --texto: #fff; /* Color de texto */
+  --form: #f3d6ee; /* Color principal (rosa) */
 }
 
 
@@ -25,118 +34,121 @@ nav .nav-link {
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  color: #262929;
+  font-size: 0.9em;
 }
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  color: #bbb5af;
+  color: #262929;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  color: #262929;
+  font-size: 0.9em;
 }
 
 input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  color: #bbb5af;
+  color: #262929;
 }
 
 input::placeholder, textarea::placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+  color: #262929;
+  font-size: 0.9em;
 }
 
-input:focus::placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
+input:focus::placeholder, textarea::focus::placeholder {
+  color: #262929;
+  
 }
 
 input::-ms-placeholder, textarea::-ms-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
+  color: #262929;
+font-size: 0.9em;
+} 
 
 input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-  color: #bbb5af;
+  color: #262929;
+
 }
 
 /* on hover placeholder */
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  color: #262929;
+font-size: 0.9em;
 }
 
 input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
+  color: #262929;
+  
 }
 
 input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  color: #262929;
+  font-size: 0.9em;
 }
 
 input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
-  color: #cbc6c1;
+  color: #262929;
+
 }
 
 input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  color: #262929;
+font-size: 0.9em;
 }
 
 input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-  color: #cbc6c1;
+  color: #262929;
+
 }
 
 input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+  color: #262929;
+font-size: 0.9em;
 }
 
 input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-  color: #cbc6c1;
+  color: #262929;
+
 }
 
 body {
   font-family: 'Lato', sans-serif;
-  background: #e2dedb;
-  color: #b3aca7;
+  background-color: #fff;
+  color: var(--texto);
 }
 
 header {
   position: relative;
   margin: 100px 0 25px 0;
-  font-size: 3.2em;
+  font-size: 3.5em;
   text-align: center;
   letter-spacing: 1px;
-  font-weight: 800;
-  text-shadow: 0 0 2px  #FFD700 ;
-  -webkit-text-stroke: 0.3px #ffff;
+  font-weight: 900;
+  color:  #262929;
+ 
 }
 
 #form {
   position: relative;
-  width: 700px;
-  margin: 50px auto 100px auto;
+  width: 600px;
+  margin: 20px auto 100px auto;
   text-align: center;
+ 
 }
 
 input {
   font-family: 'Lato', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.30em;
   width: 600px;
   height: 70px;
   padding: 0px 15px 0px 15px;
-  
-  background: transparent;
+  background-color:  var(--form);
   outline: none;
-  color: #726659;
-  
-  border: solid 4px #b3aca7;
+  color: var(--principal);
+  border: solid 4px var(--navbar-footer);
   border-bottom: none;
-
-  
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -144,25 +156,25 @@ input {
 }
 
 input:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+  background-color: var(--separador);
+  color: var(--navbar-footer); ;
 }
 
 textarea {
   width: 600px;
   max-width: 600px;
-  height: 140px;
-  max-height: 110px;
+  height: 170px;
+  max-height: 250px;
   padding: 15px;
-  
-  background: transparent;
+  color: var(--principal);
+  border: solid 4px var(--navbar-footer);
+  background-color:  var(--form);
   outline: none;
-  
-  color: #726659;
   font-family: 'Lato', sans-serif;
   font-size: 1.25em;
+
   
-  border: solid 4px #b3aca7;
+
   
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -171,29 +183,42 @@ textarea {
 }
 
 textarea:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+  background-color: var(--separador);
+  color: var(--navbar-footer); ;
 }
 
 #submit {
   width: 600px;
-  
   padding: 0;
   margin: -5px 0px 0px 0px;
-  
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif ;
+  font-weight: 600;
   font-size: 2em;
-  color: #b3aca7;
-  -webkit-text-stroke: 0.5px #b6967f ;
-  
   outline:none;
   cursor: pointer;
-
-  border: solid 4px #b3aca7;
+  border: solid 4px #262929;
   border-top: none;
-  background-image: linear-gradient(rgba(238, 237, 229, 0.5), rgba(241, 247, 212, 0.5))
+  background:linear-gradient(136deg, var(--principal), rgb(224, 187, 223) , var(--principal), rgb(170, 114, 243) , var(--principal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient 8s ease-in-out infinite;
+  
+ 
+}
+.btnenv{
+  background-color: var(--navbar-footer) ;
+  margin: -5px 0px 0px 0px;
+ 
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%;; }
 }
 
 #submit:hover {
-  color: #e2dedb;
+  background-color: var(--separador);
+  color: var(--navbar-footer); ;
 }

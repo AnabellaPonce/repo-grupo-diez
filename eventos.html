@@ -74,10 +74,46 @@
           
         <!-- Repeat the above figure for each image -->
     </section>
+	<section class="vintalight" id="vintalight">
+	<div class="contact-form-container">
+        <div class="pr">
+            <h1 class="contact__title">¡Completa el formulario!</h1>
+            <p> Nuestra propuesta es integral y contamos con promociones y facilidades de pago durante todo el año. Si tenes alguna consulta escribinos
+			y un miembro de nuestro equipo se pondrá en contacto con vos para ayudarte y asesorarte.</p>
+        </div>
+      <div>
+      <form action="contactForm.php" method="POST">
+		 <div class="contact-form-inputs">
+			<div><input type="text" name="nombre" placeholder="Nombre"></div>
+			<div><input type="text" name="email" placeholder="Email" ></div>
+			<div><input type="text" name="telefono" placeholder="Telefono" ></div>
+			<div><select   name="tipo" id="tipo" >
+									<option value="">Tipo de Evento</option>
+									<option value="Cumpleaños">Cumpleaños</option>
+									<option value="Bodas">Bodas</option>
+									<option value="Eventos Sociales">Eventos Sociales</option>
+		         </select>
+		    </div>
+		    <div>
+				<input type="date" name="fechaEvento" id="fechaEvento" placeholder="Fecha de Evento"  >
+			</div>
+			<div><textarea name="mensaje" rows="4" placeholder="Mensaje"></textarea></div>
+			
+			<div>			
+				<label class="contact-form-checkbox">Aceptar politica de privacidad
+				  <input type="checkbox" checked="checked">
+				  <span class="checkmark"></span>
+				</label>			
+			</div>  						   
+			<div class="text-left"><button >Enviar</button></div>
+		 </div>
+		</form>        
+	  </div>
+      
+    </div>
+	  
+    </section>
 
-
-  <!--#include file="include_head.html" -->
-  <link rel="import" href="footer.html">
 
    <script src="js/eventos.js" ></script>
 </body>

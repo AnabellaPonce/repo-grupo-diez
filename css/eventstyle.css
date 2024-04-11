@@ -69,7 +69,7 @@ nav .nav-link {
       font-size: var(--size);
       box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
       transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
-      border: 3px solid red;
+   
   }
   
   .vintalight__container:nth-child(1) {
@@ -191,6 +191,39 @@ nav .nav-link {
      
   }
   
+/* momentos eventia */
+
+.vintalight-overlay1 {
+  
+ 
+}
+
+.vintalight-overlay2 {
+ 
+  
+}
+
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 70%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+
+
 .contact-form-container {
   width: 100%;
   margin: 0 auto;

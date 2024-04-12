@@ -220,8 +220,14 @@ nav .nav-link {
   text-align: center;
   font-size: 1.5rem;
   border-radius: 10px;
+  cursor: pointer; 
 }
 
+.card-link {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
 
 
 .contact-form-container {

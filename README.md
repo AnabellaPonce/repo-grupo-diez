@@ -33,5 +33,10 @@ DATOS:
  Nombre y apellido: Germán Pablo Gonzalez
  email: germancai@hotmail.com
  linkedin: www.linkedin.com/in/germán-pablo-gonzalez
+ Desarrollador Full 
+
+ Nombre y apellido: Anabella Carina Ponce
+ email: anabellaponce@gmail.com
+ linkedin: www.linkedin.com/in/anabella-ponce
  Desarrollador Full Stack
 

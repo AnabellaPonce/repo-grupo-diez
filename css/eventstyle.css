@@ -6,17 +6,21 @@
     box-sizing: border-box;
   
 }
-
 html {
-    font-size: 62.5%; /* 1 Rem = 10px */
+  font-size: 62.5%; /* 1 Rem = 10px */
 }
 
 body {
-    line-height: 1.5;
-    overflow-x: hidden;
-    background-color: #f2f2f2;
-
+  line-height: 1.5;
+  overflow-x: hidden;
 }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background:#f2f2f2;
+}
+
 
 nav .navbar-brand {
     font-size: 2.5rem;
@@ -26,18 +30,6 @@ nav .nav-link {
     font-size: 2rem;
 }
 
-
-
-:root {
-    --size: 25px; /* Tamaño */
-    --resize: 0.7; /* Redimencionamiento */
-    --fig-width: 10.5em; /* Ancho contenedor fotografía */
-    --fig-height: 12.25em; /* Alto contenedor fotografía */
-    --photo-size: 9.25em; /* Tamaño fotografía */
-    --font-size: 0.80em; /* Tamaño fuente */
-    --separador: #f2f2f2c5;
-    --principal: #b222bf;
-  }
   
   *,
   *::before,
@@ -46,172 +38,232 @@ nav .nav-link {
       padding: 0;
       box-sizing: border-box;
   }
+
   
+  :root {
+    --size: 2rem; /* Reducir si es necesario para que se ajuste al diseño */
+    --resize: 0.4;
+    --fig-width: 9em; /* Ancho de las figuras como porcentaje de la cuadrícula del contenedor */
+    --fig-height: 12em; /* La altura se ajusta para mantener la proporción de las imágenes */
+    --photo-size: 76%; /* Tamaño de las fotos como porcentaje de la cuadrícula del contenedor */
+    --font-size: 0.8em; /* Ajustar si es necesario para la legibilidad */
+    --separador: #f2f2f2c5;
+    --principal: #b222bf;
+    --navbar-footer: #262929; /* Color navbar-footer */
+    --background-color: #d290d8; /* Color de fondo */
+    --texto: #fff; /* Color de texto */
+    --form: #f3d6ee; /* Color principal (rosa) */
+    --separador2:#c1a3c4;
+    --principal: #b222bf; /* Neon principal */
+    --neon-secondary: #f3d6ee; /* Neon secundario */
+    --neon-dark: #262929; /* Color oscuro para detalles */
+}
   
-  .vintalight {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 70%;
-      max-width: 1200px;
-      padding: 50px 0;
-      margin: auto;
-      background-color: #c1a3c4;
+  /* seccion polaroid */
+  
+
+.grid-container {
+  display: grid;
+  height: 115vh;
+  grid-template-columns: 1fr 3fr 1fr; /* Configuración de las columnas */
+  gap: 10px; /* Espacio entre las columnas */
+  
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+.grid-item.center {
+  flex: 0 0 auto; /* No crece ni se encoge */
+  width: calc(100% - 2.5rem); /* Ajusta el ancho teniendo en cuenta el padding */
+  height: 100%; /* Altura automática según el contenido, ajustar si es necesario */
+  position: relative; /* Establece como relativo para z-index si es necesario */
+  z-index: 1; /* Asegúrate de que no esté detrás de otros elementos */
+  overflow: hidden; /* Evita que el contenido interno se desborde */
+
+}
+
+.grid-item.left, .grid-item.right {
+  font-size: 46px; /* Tamaño de fuente aumentado */
+  font-weight: bold; /* Hace el texto más ancho */
+  animation: fadeInOut 5s ease-in-out infinite; /* Aumentamos la duración y suavizamos la curva de velocidad */ 
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+      opacity: 0;
+  }
+  25%, 75% {
+      opacity: 1;
+  }
+}
+
+
+.mo {
+  transform:rotate(-45deg); /* Inclinación hacia la izquierda para 'mo' */
+  color: black; /* Color de texto */
+  text-shadow: 
+        0 0 3px var(--principal), /* Brillo principal más fino */
+        0 0 5px var(--neon-secondary), /* Brillo secundario */
+        0 0 2px var(--neon-dark); /* Detalle oscuro para profundidad */
       
-  }
-  
-  .vintalight__container {
-      position: relative;
-      width: 90%;
-      max-width: var(--fig-width);
-      height: var(--fig-height);
-      background-color: #fff ;
-      font-size: var(--size);
-      box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
-      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
-   
-  }
-  
-  .vintalight__container:nth-child(1) {
-      transform: translate(40px, 30px) rotate(-30deg);
-      z-index: 40;
-  }
-  
-  .vintalight__container:nth-child(1):hover {
-      transform: scale(1.15) translate(40px, 30px) rotate(0);
-  }
-  
-  .vintalight__container:nth-child(2) {
-      transform: translate(30px, 20px) rotate(7deg);
-      z-index: 50;
-  }
-  
-  .vintalight__container:nth-child(2):hover {
-      transform: scale(1.15) translate(30px, 20px) rotate(0);
-  }
-  
-  .vintalight__container:nth-child(3) {
-      transform: translate(-20px, 20px) rotate(20deg);
-      z-index: 40;
-  }
-  
-  .vintalight__container:nth-child(3):hover {
-      transform: scale(1.15) translate(-20px, 20px) rotate(0);
-  }
-  
-  .vintalight__container:nth-child(4) {
-      transform: translate(40px, -10px) rotate(10deg);
-      z-index: 30;
-  }
-  
-  .vintalight__container:nth-child(4):hover {
-      transform: scale(1.15) translate(40px, -10px) rotate(0);
-  }
-  
-  .vintalight__container:nth-child(5) {
-      transform: translate(30px, -20px) rotate(-20deg);
-      z-index: 20;
-  }
-  
-  .vintalight__container:nth-child(5):hover {
-      transform: scale(1.15) translate(30px, -20px) rotate(0);
-  }
-  
-  .vintalight__container:nth-child(6) {
-      transform: translate(30px, -40px) rotate(-10deg);
-      z-index: 40;
-  }
-  
-  .vintalight__container:nth-child(6):hover {
-      transform: scale(1.15) translate(30px, -40px) rotate(0);
-  }
-  
-  .vintalight__container:hover {
-      box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4);
-      z-index: 100;
-  }
-  
-  .vintalight__container.active,
-  .vintalight__container.active:hover {
-      transform: rotate(0) scale(1.25);
-  }
-  
-  .vintalight__container.active {
-      position: relative;
-  }
-  
-  .vintalight__photo {
-      position: relative;
-      width: var(--photo-size);
-      height: var(--photo-size);
-      margin: calc((var(--fig-width) - var(--photo-size)) / 2) auto 0;
-      overflow: hidden;
-      cursor: pointer;
-  }
-  
-  .vintalight__photo::before {
-      content: "Ver foto";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      font-size: var(--font-size);
-      font-family: var(--font-view);
-      transform: scale(0);
-      transition: all 0.25s;
-  }
-  
-  .vintalight__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  
-  .vintalight__caption {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: calc((var(--fig-height) - var(--photo-size)) - ((var(--fig-width) - var(--photo-size)) / 2));
-  }
-  
-  .vintalight__text {
-      color: #222;
-      font-size: var(--font-size);
-      font-family: var(--font-description);
-      text-align: center;
-  }
-  
-  .vintalight-overlay {
-      display: flex;
-     
-  }
-  
-/* momentos eventia */
+       
 
-.vintalight-overlay1 {
-  
- 
 }
 
-.vintalight-overlay2 {
+.ev {
+  transform:rotate(-315deg); /* Inclinación hacia la derecha para 'ev' */
+  color: black; /* Color de texto */
+  text-shadow: 
+        0 0 3px var(--principal), /* Brillo principal más fino */
+        0 0 5px var(--neon-secondary), /* Brillo secundario */
+        0 0 2px var(--neon-dark); /* Detalle oscuro para profundidad */
+       
+}
  
+
+
+
+.vintalight {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 80px 0;
+  margin: 3px;
   
 }
+
+.vintalight__container {
+  position: relative;
+  width: 100%;
+  max-width: var(--fig-width);
+  height: var(--fig-height);
+  background-color: #fff;
+  font-size: var(--size);
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
+
+
+}
+
+.grid-item.left{
+  grid-column: 1 / 2; /* Ajuste según la necesidad de la disposición del grid */
+}
+
+.grid-item.right{
+  grid-column: 3 / 4; /* Asegúrate de que esto se coloca correctamente en tu layout de grid */
+
+}
+
+.vintalight__photo {
+  position: relative;
+  width: var(--photo-size);
+  height: var(--photo-size);
+  margin: calc((var(--fig-width) - var(--photo-size)) / 2) auto 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.vintalight__photo::before {
+  content: "Ver foto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: var(--font-size);
+  font-family: var(--font-view);
+  transform: scale(0);
+  transition: all 0.25s;
+}
+
+/* Transformaciones específicas para cada contenedor basado en su posición */
+.vintalight__container:nth-child(1) {
+  transform: translate(-20px, 30px) rotate(-30deg);
+  z-index: 40;
+}
+
+.vintalight__container:nth-child(1):hover,
+.vintalight__container:nth-child(2):hover,
+.vintalight__container:nth-child(3):hover,
+.vintalight__container:nth-child(4):hover,
+.vintalight__container:nth-child(5):hover {
+  transform: scale(1.15); /* Escalar al pasar el mouse, sin rotación adicional */
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+/* Se aplican transformaciones a otros contenedores */
+.vintalight__container:nth-child(2) {
+  transform: translate(20px, 10px) rotate(7deg);
+  z-index: 50;
+
+}
+
+.vintalight__container:nth-child(3) {
+  transform: translate(40px, 30px) rotate(20deg);
+  z-index: 40;
+}
+
+.vintalight__container:nth-child(4) {
+  transform: translate(40px, 10px) rotate(10deg);
+  z-index: 30;
+}
+
+.vintalight__container:nth-child(5) {
+
+  transform: translate(50px, 15px) rotate(-25deg); /* Ajusta la translación y rotación */
+  z-index: 20; /* Mantén el z-index como está o ajusta según sea necesario */
+}
+
+
+.vintalight__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vintalight__caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc((var(--fig-height) - var(--photo-size)) - ((var(--fig-width) - var(--photo-size)) / 2));
+}
+
+.vintalight__text {
+  color: #222;
+  font-size: var(--font-size);
+  font-family: var(--font-description);
+  text-align: center;
+}
+
 
 .event-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  width: 70%;
-  max-width: 1200px;
-  margin: 20px auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+padding: 20px;
+width: 65%;
+max-width: 1200px;
+margin: 50px auto; /* Aumenta el margen superior si es necesario para asegurar el espacio con el contenido anterior */
+background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
 }
+
 
 .card {
   background-color: #fff;
@@ -221,6 +273,7 @@ nav .nav-link {
   font-size: 1.5rem;
   border-radius: 10px;
   cursor: pointer; 
+  border: 3px solid var(--principal);
 }
 
 .card-link {
@@ -238,6 +291,7 @@ nav .nav-link {
   grid-template-columns: repeat(2, 1fr);
   font-weight: 500;
   padding: 100px 40px;
+  background-color: var(--form);
 }
 
 .contact__title {
@@ -296,7 +350,7 @@ nav .nav-link {
 }
 .contact-form-inputs input:focus,
 .contact-form-inputs textarea:focus,
-.contact-form-inputs select:focus,
+.contact-form-inputs select:focus
 {
   outline: 0;
   box-shadow: none;

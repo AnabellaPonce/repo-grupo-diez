@@ -1,0 +1,10 @@
+body {
+    font-family:Lato !important; 
+    background-color: #f4f4f4; /* Light grey background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Full height */
+  }

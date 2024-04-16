@@ -37,6 +37,7 @@ nav .nav-link {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      padding: 0; /* Elimina cualquier padding */
   }
 
   
@@ -60,14 +61,15 @@ nav .nav-link {
 }
   
   /* seccion polaroid */
-  
-
 .grid-container {
   display: grid;
   height: 115vh;
-  grid-template-columns: 1fr 3fr 1fr; /* Configuración de las columnas */
-  gap: 10px; /* Espacio entre las columnas */
-  
+  grid-template-columns: 1.15fr 2.70fr 1.15fr; /* Configuración de las columnas */
+  gap: 0px; /* Espacio entre las columnas */
+  margin: 0;
+  padding: 0; /* Elimina cualquier padding */
+  background-image:linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5)),url(https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg);
+  background-size: cover;
 }
 
 .grid-item {
@@ -75,27 +77,30 @@ nav .nav-link {
   justify-content: center;
   align-items: center;
   color: white;
-
+  margin: 0;
+  gap:0px;
+  padding: 0; /* Elimina cualquier padding */
+  flex-direction: column-reverse;
 }
 
 .grid-item.center {
   flex: 0 0 auto; /* No crece ni se encoge */
-  width: calc(100% - 2.5rem); /* Ajusta el ancho teniendo en cuenta el padding */
+  width: calc(100% - 0rem); /* Ajusta el ancho teniendo en cuenta el padding */
   height: 100%; /* Altura automática según el contenido, ajustar si es necesario */
   position: relative; /* Establece como relativo para z-index si es necesario */
   z-index: 1; /* Asegúrate de que no esté detrás de otros elementos */
   overflow: hidden; /* Evita que el contenido interno se desborde */
-
+  gap: 0px;
 }
 
 .grid-item.left, .grid-item.right {
   font-size: 46px; /* Tamaño de fuente aumentado */
   font-weight: bold; /* Hace el texto más ancho */
-  animation: fadeInOut 5s ease-in-out infinite; /* Aumentamos la duración y suavizamos la curva de velocidad */ 
+  animation:fadeInOut 4s ease-in-out infinite; /* Aumentamos la duración y suavizamos la curva de velocidad */ 
   justify-content: center;
   align-items: center;
- 
-  
+  background-size: 500px 950px;
+  gap: 0;
 }
 
 @keyframes fadeInOut {
@@ -107,30 +112,74 @@ nav .nav-link {
   }
 }
 
+/*background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5)),url(https://t4.ftcdn.net/jpg/01/18/95/07/360_F_118950777_Cay1sgFONNyTzfINFYjgOD3YuLfN6zy8.jpg) ; url(https://images.pexels.com/photos/18741663/pexels-photo-18741663/free-photo-of-fuegos-artificiales-valencia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) */
 
 .mo {
   transform:rotate(-45deg); /* Inclinación hacia la izquierda para 'mo' */
-  color: black; /* Color de texto */
-  text-shadow: 
-        0 0 3px var(--principal), /* Brillo principal más fino */
-        0 0 5px var(--neon-secondary), /* Brillo secundario */
-        0 0 2px var(--neon-dark); /* Detalle oscuro para profundidad */
-      
-       
+  animation: glow 4s ease-in-out infinite;
+}
+@keyframes glow {
+  0%, 100% {
+    color: #fff;
+    text-shadow:
+      0 0 5px #ff8c8c, /* un tono rojo claro */
+      0 0 15px #ffa500, /* un tono de naranja para complementar */
+      0 0 20px #ffd700, /* un dorado para dar la impresión de los fuegos artificiales */
+      0 0 25px #87cefa; /* un azul claro que combine con el cielo */
+  }
+  50% {
+    color: #f2f2f2;
+    text-shadow:
+      0 0 2.5px #ff8c8c, 
+      0 0 5px #ffa500, 
+      0 0 10px #ffd700, 
+      0 0 15px #87cefa;
+  }
+}
+.ev {
+  transform:rotate(-315deg)translateY(-10px); /* Inclinación hacia la derecha para 'ev' */
+  animation: glow2 4s ease-in-out infinite;
+}
+@keyframes glow2 {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(178, 34, 191, 0.7),
+      0 0 6px rgba(178, 34, 191, 0.5),
+      0 0 12px var(--principal),
+      0 0 22px var(--neon-secondary),
+      0 0 32px var(--neon-secondary),
+      0 0 42px var(--neon-secondary),
+      0 0 52px var(--principal) ;
 
+    color: #fff;
+  }
+  50% {
+    text-shadow:
+      0 0 3px rgba(178, 34, 191, 0.9),
+      0 0 6px rgba(178, 34, 191, 0.7),
+      0 0 11px var(--principal),
+      0 0 16px var(--neon-secondary),
+      0 0 21px var(--neon-secondary),
+      0 0 26px var(--neon-secondary),
+      0 0 32px var(--principal);
+    
+    color: var(--texto);
+  }
 }
 
-.ev {
-  transform:rotate(-315deg); /* Inclinación hacia la derecha para 'ev' */
-  color: black; /* Color de texto */
-  text-shadow: 
-        0 0 3px var(--principal), /* Brillo principal más fino */
-        0 0 5px var(--neon-secondary), /* Brillo secundario */
-        0 0 2px var(--neon-dark); /* Detalle oscuro para profundidad */
-       
+#sev{display:none;
 }
  
+.grid-item.left {
+  grid-column: 1 / 2; /* Ajuste según la necesidad de la disposición del grid */
+  background-position: center; /* Alinea la imagen de fondo hacia la izquierda y centra verticalmente */
+}
 
+
+.grid-item.right {
+  grid-column: 3 / 4; /* Asegúrate de que esto se coloca correctamente en tu layout de grid */
+  background-position: center; /* Alinea la imagen de fondo hacia la derecha y centra verticalmente */
+}
 
 
 .vintalight {
@@ -138,10 +187,10 @@ nav .nav-link {
   justify-content: center;
   height: 100%;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   padding: 80px 0;
   margin: 3px;
-  
+  background-size: cover;
 }
 
 .vintalight__container {
@@ -153,18 +202,9 @@ nav .nav-link {
   font-size: var(--size);
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
-
-
 }
 
-.grid-item.left{
-  grid-column: 1 / 2; /* Ajuste según la necesidad de la disposición del grid */
-}
 
-.grid-item.right{
-  grid-column: 3 / 4; /* Asegúrate de que esto se coloca correctamente en tu layout de grid */
-
-}
 
 .vintalight__photo {
   position: relative;
@@ -193,7 +233,7 @@ nav .nav-link {
 
 /* Transformaciones específicas para cada contenedor basado en su posición */
 .vintalight__container:nth-child(1) {
-  transform: translate(-20px, 30px) rotate(-30deg);
+  transform: translate(-30px, 50px) rotate(-30deg);
   z-index: 40;
 }
 
@@ -209,25 +249,27 @@ nav .nav-link {
 
 /* Se aplican transformaciones a otros contenedores */
 .vintalight__container:nth-child(2) {
-  transform: translate(20px, 10px) rotate(7deg);
+  transform: translate(10px, 10px) rotate(7deg);
   z-index: 50;
 
 }
 
 .vintalight__container:nth-child(3) {
-  transform: translate(40px, 30px) rotate(20deg);
+  transform: translate(25px, 40px) rotate(20deg);
   z-index: 40;
 }
 
 .vintalight__container:nth-child(4) {
-  transform: translate(40px, 10px) rotate(10deg);
+  transform: translate(-10px, 20px) rotate(10deg);
   z-index: 30;
+ 
 }
 
 .vintalight__container:nth-child(5) {
 
-  transform: translate(50px, 15px) rotate(-25deg); /* Ajusta la translación y rotación */
+  transform: translate(30px, 15px) rotate(-25deg); /* Ajusta la translación y rotación */
   z-index: 20; /* Mantén el z-index como está o ajusta según sea necesario */
+  
 }
 
 
@@ -250,6 +292,8 @@ nav .nav-link {
   font-size: var(--font-size);
   font-family: var(--font-description);
   text-align: center;
+  font-weight: 600;
+  margin-top: -10px;
 }
 
 
@@ -282,9 +326,12 @@ background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
   display: block; 
 }
 
-
+/*formulario*/
+.form{
+  margin-bottom: 30px;
+}
 .contact-form-container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   display: grid;
@@ -311,7 +358,7 @@ background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
   line-height: 27px;
   color: #2b2b2b;
   font-weight: 300;
-  margin-bottom: 22px;
+  margin-top: 10px;
 }
 .contact__subtitle {
   font-family: Georgia, serif;
@@ -465,3 +512,111 @@ background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
   transform: rotate(45deg);
 }
 
+/* FOOTER */
+
+footer {
+  height: 220px;
+  background-color: #262929;
+}
+
+.texto-footer {
+  padding-top: 3rem;
+  background-color: #262929;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.direccion-footer h3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--principal);
+  margin-bottom: 1rem;
+}
+
+.direccion-footer {
+  display: block;
+}
+
+.eventos-footer h3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--principal);
+  margin-bottom: 1rem;
+}
+
+.eventos-footer {
+  display: block;
+}
+
+
+.paginas-footer h3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--principal);
+  margin-bottom: 1rem;
+}
+
+
+.paginas-footer ul li{
+  list-style: none;
+}
+
+
+
+.paginas-footer a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.seguinos-footer h3 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--principal);
+  margin-bottom: 1rem;
+}
+
+.iconos-footer {
+  font-size: 1.8rem;
+}
+
+.iconos-footer a {
+  color: #fff;
+  padding-right: 0.5rem;
+}
+
+.copyright {
+  background-color: #262929;
+}
+
+.texto-copy {
+  padding-top: 2rem;
+}
+
+.copyright p {
+  color: #fff;
+  font-size: 1.1rem;
+}

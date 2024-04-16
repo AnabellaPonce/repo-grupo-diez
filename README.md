@@ -40,3 +40,8 @@ DATOS:
  linkedin: www.linkedin.com/in/anabella-ponce
  Desarrollador Full Stack
 
+
+ Nombre y apellido: Gabriela Coronel 
+ email: gacoronelok@gmail.com
+ linkedin:https://www.linkedin.com/in/gabriela-coronel-43a0a4286/
+ Desarrolladora Full Stack

@@ -426,6 +426,24 @@ input[type="radio"] {
   transition: transform 0.3s ease-in-out;
 }
 
+.card:hover:after {
+  transform: translateY(0%); /* Mueve la capa oscurecedora fuera de la vista para revelar la imagen debajo */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.0) 0%,   /* más claro */
+    rgba(0, 0, 0, 0.8) 100%  /* más oscuro */
+  );
+}
+.card:hover .copy {
+  opacity: 1; /* Hace el texto visible durante el hover */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.copy {
+  opacity: 0; /* Hace el texto invisible inicialmente */
+  transition: opacity 0.5s ease-in-out;
+  color: white; /* Color del texto, asegúrate de que sea visible sobre el fondo oscuro */
+}
 .card:before {
   content: '';
   position: absolute;
@@ -435,8 +453,8 @@ input[type="radio"] {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
+  transition: transform calc(var(--d) * 1.5) var(--e);
 }
 
 .card:after {
@@ -448,28 +466,10 @@ input[type="radio"] {
   width: 100%;
   height: 200%;
   pointer-events: none;
-  background-image: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.009) 11.7%,
-    hsla(0, 0%, 0%, 0.034) 22.1%,
-    hsla(0, 0%, 0%, 0.072) 31.2%,
-    hsla(0, 0%, 0%, 0.123) 39.4%,
-    hsla(0, 0%, 0%, 0.182) 46.6%,
-    hsla(0, 0%, 0%, 0.249) 53.1%,
-    hsla(0, 0%, 0%, 0.320) 58.9%,
-    hsla(0, 0%, 0%, 0.394) 64.3%,
-    hsla(0, 0%, 0%, 0.468) 69.3%,
-    hsla(0, 0%, 0%, 0.540) 74.1%,
-    hsla(0, 0%, 0%, 0.607) 78.8%,
-    hsla(0, 0%, 0%, 0.668) 83.6%,
-    hsla(0, 0%, 0%, 0.721) 88.7%,
-    hsla(0, 0%, 0%, 0.762) 94.1%,
-    hsla(0, 0%, 0%, 0.790) 100%
-  );
-   
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
+   
+ 
 }
 
 .content {

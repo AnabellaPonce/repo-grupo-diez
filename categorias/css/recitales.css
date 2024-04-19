@@ -339,20 +339,24 @@ input[type="radio"] {
 }
 
 .espacios {
-  width: 80%; 
+  width: 80%;
   margin: auto;
   padding-bottom: 2rem; 
-}
+ 
+  }
+  
 
 
 .espacios .page-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta para un mínimo más estrecho */
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   margin: 0 auto;
-  justify-content: center;
-  align-items: start;
+  justify-content: stretch;
+  align-items: center;
+
+
 }
 
 @media (min-width: 600px) {
@@ -373,7 +377,7 @@ input[type="radio"] {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  padding: 2rem; /* Incrementa el padding para aumentar la altura */
+  padding: 1.25rem; /* Incrementa el padding para aumentar la altura */
   margin-bottom: 1rem; /* Añade espacio entre tarjetas */
   width: 100%; /* Ancho automático dentro del grid */
   min-height: 400px; /* Altura mínima */
@@ -391,27 +395,28 @@ input[type="radio"] {
 }
 
 .card:nth-of-type(1):before {
-  background-image: url('/img/reci2.jpg');
+  background-image: url('/img/wow\ sound\ reci.jpg');
 }
 
 .card:nth-of-type(2):before {
-  background-image: url('/img/reci3.png');
+  background-image: url('/img/club-.jpg');
 }
 
 .card:nth-of-type(3):before {
-  background-image: url('/img/reci4.jpg');
+
+background-image: url('/img/area-rock.jpg');
 }
 
 .card:nth-of-type(4):before {
-  background-image: url('/img/reci5.png');
+  background-image: url('/img/arco-tecno-reci.jpg');
 }
 
 .card:nth-of-type(5):before {
-  background-image: url('/img/reci\ 1.jpg');
+  background-image: url('/img/museum.jpg');
 }
 
 .card:nth-of-type(6):before {
-  background-image: url('/img/recitales.jpg');
+  background-image: url('/img/hipodromonorte-reci.webp');
 }
 
 @media (min-width: 600px) {
@@ -426,23 +431,51 @@ input[type="radio"] {
   transition: transform 0.3s ease-in-out;
 }
 
-.card:hover:after {
-  transform: translateY(0%); /* Mueve la capa oscurecedora fuera de la vista para revelar la imagen debajo */
+
+.card:hover::after {
+  content: ''; /* Asegúrate de que esté en el estilo para que funcione */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0%);
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.0) 0%,   /* más claro */
-    rgba(0, 0, 0, 0.8) 100%  /* más oscuro */
-  );
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.009) 11.7%,
+    hsla(0, 0%, 0%, 0.034) 22.1%,
+    hsla(0, 0%, 0%, 0.072) 31.2%,
+    hsla(0, 0%, 0%, 0.123) 39.4%,
+    hsla(0, 0%, 0%, 0.182) 46.6%,
+    hsla(0, 0%, 0%, 0.249) 53.1%,
+    hsla(0, 0%, 0%, 0.320) 58.9%,
+    hsla(0, 0%, 0%, 0.394) 64.3%,
+    hsla(0, 0%, 0%, 0.468) 69.3%,
+    hsla(0, 0%, 0%, 0.61) 74.1%,
+    hsla(0, 0%, 0%, 0.607) 78.8%,
+    hsla(0, 0%, 0%, 0.712) 83.6%,
+    hsla(0, 0%, 0%, 0.721) 88.7%,
+    hsla(0, 0%, 0%, 0.849) 94.1%,
+    hsla(0, 0%, 0%, 0.904) 100%
+  );/* Capa oscurecedora */
+  transition: transform 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  pointer-events: none; /* Para no interferir con otros elementos de la tarjeta */
 }
+
+
+
 .card:hover .copy {
   opacity: 1; /* Hace el texto visible durante el hover */
   transition: opacity 0.5s ease-in-out;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-text-stroke: #ffffff 0.5px;
 }
 
 .copy {
   opacity: 0; /* Hace el texto invisible inicialmente */
-  transition: opacity 0.5s ease-in-out;
-  color: white; /* Color del texto, asegúrate de que sea visible sobre el fondo oscuro */
+  color: #ffffff; /* Color del texto, asegúrate de que sea visible sobre el fondo oscuro */
 }
 .card:before {
   content: '';
@@ -468,8 +501,6 @@ input[type="radio"] {
   pointer-events: none;
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
-   
- 
 }
 
 .content {
@@ -479,10 +510,12 @@ input[type="radio"] {
   align-items: center;
   padding: 1rem;
   width: 100%;
+
 }
 
-.title, .copy {
-  margin: 0.5rem 0;
+.title .copy {
+  margin: -2rem 0;
+  margin-top: 0;
 }
 
 .btn {

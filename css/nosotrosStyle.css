@@ -42,6 +42,11 @@ nav .nav-link {
   font-size: 2rem;
 }
 
+.logo-navbar {
+  width: 120px;
+  height: 40px;
+}
+
 /* HEADER */
 
 .header {

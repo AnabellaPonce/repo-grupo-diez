@@ -34,6 +34,11 @@ nav .nav-link {
   font-size: 1.2rem;
 }
 
+.logo-navbar {
+  width: 120px;
+  height: 40px;
+}
+
 .containerespacios {
   background: #ffffff; /* White background for the container */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */

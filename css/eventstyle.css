@@ -60,8 +60,10 @@ nav .nav-link {
     --texto: #fff; /* Color de texto */
     --form: #f3d6ee; /* Color principal (rosa) */
     --separador2:#c1a3c4;
-  
+    --neon-secondary: #f3d6ee; /* Neon secundario */
+
 }
+
   
   /* seccion polaroid */
 .grid-container {
@@ -205,6 +207,7 @@ nav .nav-link {
   font-size: var(--size);
   box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
+  border: 3px solid red;
 }
 
 
@@ -216,6 +219,7 @@ nav .nav-link {
   margin: calc((var(--fig-width) - var(--photo-size)) / 2) auto 0;
   overflow: hidden;
   cursor: pointer;
+
 }
 
 .vintalight__photo::before {
@@ -280,6 +284,7 @@ nav .nav-link {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 .vintalight__caption {
@@ -299,7 +304,68 @@ nav .nav-link {
   margin-top: -10px;
 }
 
+ 
+  /* Media query para pantallas menores de 768px (p. ej., teléfonos móviles) */
+@media (max-width: 750px) {
+  .grid-item.left, .grid-item.right {
+    font-size: 20px; /* Disminuye ligeramente el tamaño de la fuente si es demasiado grande */
+    margin-top: 310px;
+  }
 
+  .grid-container{
+    display: grid;
+    align-content: stretch;
+    justify-content:space-evenly;
+    align-items: start;
+    justify-items: stretch;
+    width: 100%;
+    grid-template-columns: 1.15fr 2.70fr 1.15fr; /* Configuración de las columnas */
+
+  }
+  .vintalight {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); /* Crea columnas que ocupen al menos el 60% del ancho de la cuadrícula */
+    justify-content: stretch; /* Centra los elementos de la cuadrícula horizontalmente */
+    align-items: stretch; /* Centra los elementos de la cuadrícula verticalmente */
+    gap: 10px; /* Agrega un poco de espacio entre las imágenes */
+  }
+
+  .vintalight__container {
+   display: grid;
+   width: 100%;
+   height: 100%;
+  }
+
+
+  .vintalight__photo {
+    width: 80%; /* Asegúrate de que la foto ocupe todo el ancho disponible del contenedor */
+    height: 80%; /* Y que la altura se ajuste para mantener la relación de aspecto */
+  }
+  
+  /* Asegúrate de que los textos de las imágenes también se ajusten al tamaño reducido */
+  .vintalight__caption {
+    display: none;
+  }
+}
+
+
+/* Media query para pantallas entre 768px y 1024px (p. ej., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-item.left, .grid-item.right {
+    font-size: 40px; /* Ajusta el tamaño de la fuente para tablets */
+  }
+}
+
+/* Media query para pantallas mayores de 1500px */
+@media (min-width: 1501px) {
+  .grid-container {
+    grid-template-columns: 1fr 2fr 1fr; /* Asegúrate de que la distribución de las columnas sea la deseada */
+  }
+}
+
+
+
+/*seccion*/
 .event-cards {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

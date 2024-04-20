@@ -10,6 +10,7 @@ html {
   font-size: 62.5%; /* 1 Rem = 10px */
 }
 
+
 body {
   line-height: 1.5;
   overflow-x: hidden;
@@ -515,6 +516,10 @@ background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
 }
 
 /* FOOTER */
+
+.pr {
+  padding: 1rem;
+}
 
 footer {
   height: 220px;

@@ -272,7 +272,6 @@ nav .nav-link {
   .espaciocont {
     flex: 1; /* Take up equal space as the image */
     padding: 2em; /* Spacing inside the content area */
-    border: 3px solid red;
     height: 90%;
     margin-top: auto;
   }
@@ -378,7 +377,9 @@ nav .nav-link {
     width: 100%;
     margin: 0;
     padding: 0;
-    }
+    background-color: rgb(211, 207, 207); 
+  }
+
     
   
   
@@ -421,39 +422,39 @@ nav .nav-link {
     max-width: 250px; /* Ancho máximo para cada tarjeta */
     min-height: 300px; /* Altura mínima */
     text-align: center;
-    color: whitesmoke;
-    background-color: whitesmoke;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1),
-                0 2px 2px rgba(0,0,0,0.1),
-                0 4px 4px rgba(0,0,0,0.1),
-                0 8px 8px rgba(0,0,0,0.1),
-                0 16px 16px rgba(0,0,0,0.1);
+    color: #ffff; /* Cambia a un color muy oscuro para el texto */
+     text-shadow: 
+      -1px -1px 0 var(--neon-dark),  
+       1px -1px 0 var(--neon-dark),
+      -1px  1px 0 var(--neon-dark),
+       1px  1px 0 var(--neon-dark);
+    font-size: 25px;
     
   }
   
   .card:nth-of-type(1):before {
-    background-image: url('/img/wow\ sound\ reci.jpg');
+    background-image: url('/img/quince1.jpg');
   }
   
   .card:nth-of-type(2):before {
-    background-image: url('/img/club-.jpg');
+    background-image: url('/img/quince2.jpg');
   }
   
   .card:nth-of-type(3):before {
   
-  background-image: url('/img/area-rock.jpg');
+  background-image: url('/img/quince3.jpg');
   }
   
   .card:nth-of-type(4):before {
-    background-image: url('/img/arco-tecno-reci.jpg');
+    background-image: url('/img/quince4.jpg');
   }
   
   .card:nth-of-type(5):before {
-    background-image: url('/img/museum.jpg');
+    background-image: url('/img/quince\ 5.jpg');
   }
   
   .card:nth-of-type(6):before {
-    background-image: url('/img/hipodromonorte-reci.webp');
+    background-image: url('/img/quince6.jpg');
   }
   
   @media (min-width: 600px) {
@@ -466,6 +467,14 @@ nav .nav-link {
   .card:hover {
     transform: scale(1.05); /* Slight scale up on hover for a dynamic effect */
     transition: transform 0.3s ease-in-out;
+    justify-content: center; /* Centra el contenido verticalmente */ 
+    color: #1a1a1a; /* Cambia a un color muy oscuro para el texto */
+     text-shadow: 
+      -1px -1px 0 #ffffff,  
+       1px -1px 0 #ffffff,
+      -1px  1px 0 #ffffff,
+       1px  1px 0 #ffffff;
+       font-weight: 600px;
   }
   
   
@@ -479,25 +488,26 @@ nav .nav-link {
     transform: translateY(0%);
     background-image: linear-gradient(
       to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.009) 11.7%,
-      hsla(0, 0%, 0%, 0.034) 22.1%,
-      hsla(0, 0%, 0%, 0.072) 31.2%,
-      hsla(0, 0%, 0%, 0.123) 39.4%,
-      hsla(0, 0%, 0%, 0.182) 46.6%,
-      hsla(0, 0%, 0%, 0.249) 53.1%,
-      hsla(0, 0%, 0%, 0.320) 58.9%,
-      hsla(0, 0%, 0%, 0.394) 64.3%,
-      hsla(0, 0%, 0%, 0.468) 69.3%,
-      hsla(0, 0%, 0%, 0.61) 74.1%,
-      hsla(0, 0%, 0%, 0.607) 78.8%,
-      hsla(0, 0%, 0%, 0.712) 83.6%,
-      hsla(0, 0%, 0%, 0.721) 88.7%,
-      hsla(0, 0%, 0%, 0.849) 94.1%,
-      hsla(0, 0%, 0%, 0.904) 100%
+         hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.009) 11.7%,
+    hsla(0, 0%, 0%, 0.034) 22.1%,
+    hsla(0, 0%, 0%, 0.072) 31.2%,
+    hsla(0, 0%, 0%, 0.123) 39.4%,
+    hsla(0, 0%, 0%, 0.182) 46.6%,
+    hsla(0, 0%, 0%, 0.249) 53.1%,
+    hsla(0, 0%, 0%, 0.320) 58.9%,
+    hsla(0, 0%, 0%, 0.394) 64.3%,
+    hsla(0, 0%, 0%, 0.468) 69.3%,
+    hsla(0, 0%, 0%, 0.468)74.1%,
+    hsla(0, 0%, 0%, 0.468) 78.8%,
+    hsla(0, 0%, 0%, 0.607)83.6%,
+    hsla(0, 0%, 0%, 0.607) 88.7%,
+    hsla(0, 0%, 0%, 0.607)94.1%,
+    hsla(0, 0%, 0%, 0.712)100%
     );/* Capa oscurecedora */
     transition: transform 0.5s ease-in-out, background-image 0.5s ease-in-out;
     pointer-events: none; /* Para no interferir con otros elementos de la tarjeta */
+     
   }
   
   
@@ -505,14 +515,20 @@ nav .nav-link {
   .card:hover .copy {
     opacity: 1; /* Hace el texto visible durante el hover */
     transition: opacity 0.5s ease-in-out;
-    font-size: 15px;
-    font-weight: 400;
-    -webkit-text-stroke: #ffffff 0.5px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a1a; /* Cambia a un color muy oscuro para el texto */
+     text-shadow: 
+      -1.5px -1px 0 #ffffff,  
+       1.5px -1px 0 #ffffff,
+      -1.5px  1px 0 #ffffff,
+       1.5px  1px 0 #ffffff;
+    
   }
   
   .copy {
     opacity: 0; /* Hace el texto invisible inicialmente */
-    color: #ffffff; /* Color del texto, asegúrate de que sea visible sobre el fondo oscuro */
+    
   }
   .card:before {
     content: '';
@@ -538,6 +554,7 @@ nav .nav-link {
     pointer-events: none;
     transform: translateY(-50%);
     transition: transform calc(var(--d) * 2) var(--e);
+    background-image: none;
   }
   
   .content {
@@ -551,19 +568,20 @@ nav .nav-link {
   }
   
   .title .copy {
-    margin: -2rem 0;
-    margin-top: 0;
+    opacity: 1; /* Hace el texto visible */
+    text-shadow: 
+      -2px -2px 0 #130909f8,  
+       2px -2px 0 #050505,
+      -2px  2px 0 #0c0c0c,
+       2px  2px 0 #080808; /* Agrega sombra blanca para crear un contorno */
+    font-weight: bold; /* Hace el texto más grueso */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 10; /* Asegúrate de que el texto esté sobre la imagen */
   }
+  .title {
+    font-size: 2.5rem; /* Aumenta el tamaño de la fuente para el título */
   
-  .btn {
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.25s ease-in-out;
   }
-  
   
   /* FOOTER */
   

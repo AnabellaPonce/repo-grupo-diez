@@ -24,6 +24,8 @@ body {
   grid-template-rows: auto 1fr auto auto auto; /* Alturas adaptativas según el contenido */
   min-height: 100vh;
   gap: 10px; /* Espacio entre las secciones */
+  flex-wrap: wrap;
+
 }
 nav {
   grid-area: nav;
@@ -331,10 +333,6 @@ nav .nav-link {
   margin-top: -10px;
 }
 
- 
-  
-
-
 /*seccion*/
 .event-cards {
 display: grid;
@@ -345,6 +343,7 @@ width: 65%;
 max-width: 1200px;
 margin: 50px auto; /* Aumenta el margen superior si es necesario para asegurar el espacio con el contenido anterior */
 background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
+border: 3px solid red;
 }
 
 
@@ -664,7 +663,7 @@ footer p {
   font-size: 1.1rem;
 }
 
-/* Media Query para tabletas */
+/* Media Query para tablets */
 @media (max-width: 1024px) {
   body {
     grid-template-areas:
@@ -673,40 +672,33 @@ footer p {
       "main"
       "section"
       "footer";
-    grid-template-rows: 60px auto 1fr auto auto; /* Ajustes específicos para tabletas */
+    grid-template-rows: 55px auto 1fr auto auto; /* Ajustes específicos para tabletas */
   }
 }
+  @media (max-width: 768px) {
+    body {
+      grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "section"
+        "footer";
+      grid-template-rows: 45px auto 1fr auto auto; /* Ajustes específicos para dispositivos móviles */
+    }
+  } 
 
-/* Media Query para dispositivos móviles */
-@media (max-width: 768px) {
-  body {
-    grid-template-areas:
-      "nav"
-      "header"
-      "main"
-      "section"
-      "footer";
-    grid-template-rows: 50px auto 1fr auto auto; /* Ajustes específicos para dispositivos móviles */
+  @media only screen and (min-width:300px) and (max-width: 550px){
+
+  header{
+    justify-items: stretch;
+    justify-content: center;
+    align-items: stretch;
+    width: 50%;
+    align-content: center;
+    grid-template-columns: 1fr;
+   & .mo , .ev {
+    display: none;
+   }
   }
 
-  nav, header, main, section, footer {
-    padding: 10px; /* Aumentar el padding para facilitar la navegación táctil */
   }
-}
-
-/* Media Query para dispositivos móviles muy pequeños */
-@media (max-width: 480px) {
-  body {
-    grid-template-areas:
-      "nav"
-      "header"
-      "main"
-      "section"
-      "footer";
-    grid-template-rows: 40px auto 1fr auto auto; /* Alturas más pequeñas para encabezados y navegación */
-  }
-
-  nav, header, main, section, footer {
-    padding: 5px; /* Padding reducido para maximizar el espacio de pantalla */
-  }
-}

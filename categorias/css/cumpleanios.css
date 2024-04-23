@@ -70,7 +70,7 @@
      margin-top: 55px; /* Add some space on the top */
      background-color:#f2f2f2;
      height: 83vh;
-     padding: 1;
+     padding: 1px;
      box-shadow:  20px 20px 60px #bebebe,
                 -20px -20px 60px #202020;
    }
@@ -128,12 +128,14 @@
    transition: all 0.25s linear;
    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-200px * var(--r)));
    z-index: calc((var(--posicion) - var(--abs)));
+   border: 7px solid black;
+
    }
    
    .item:nth-of-type(1){
    --offset: 1;
-   background-image: url('/img/reci\ 1.jpg');
-   background-size: 150%;
+   background-image: url('/img/cumple1.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    
@@ -141,17 +143,18 @@
    
    .item:nth-of-type(2){
    --offset: 2;
-   background-image: url('/img/reci2.jpg');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple2.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
+   
    
    }
    
    .item:nth-of-type(3){
    --offset: 3;
-   background-image: url('/img/reci3.png');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple3.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    
@@ -159,8 +162,8 @@
    
    .item:nth-of-type(4){
    --offset: 4;
-   background-image: url('/img/reci4.jpg');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple\ 4.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    
@@ -168,24 +171,24 @@
    
    .item:nth-of-type(5){
    --offset: 5;
-   background-image: url('/img/reci5.png');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple5.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    
    }
    .item:nth-of-type(6){
    --offset: 6;
-   background-image: url('/img/recitales.jpg');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple6.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    
    }
    .item:nth-of-type(7){
    --offset: 7;
-   background-image: url('/img/eventos\ recital\ photo.jpg');/*imagen*/
-   background-size: 150%;
+   background-image: url('/img/cumple7.jpg');
+   background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
    font-family:'lato';
@@ -266,7 +269,7 @@
      border: 1px solid var(--neon-secondary); /* Borde gris */
      cursor: pointer;    /* Cursor tipo pointer para indicar que es clickeable */
      transition: background-color 0.3s ease; 
-     
+     border: 1px solid rgba(145, 140, 140, 0.719);
    } 
    
    .espaciocont {

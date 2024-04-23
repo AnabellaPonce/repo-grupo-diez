@@ -70,7 +70,7 @@ nav .nav-link {
     margin-top: 55px; /* Add some space on the top */
     background-color:#f2f2f2;
     height: 83vh;
-    padding: 1;
+    padding: 1px;
     box-shadow:  20px 20px 60px #bebebe,
                -20px -20px 60px #202020;
   }
@@ -128,6 +128,7 @@ nav .nav-link {
   transition: all 0.25s linear;
   transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-200px * var(--r)));
   z-index: calc((var(--posicion) - var(--abs)));
+  border: 3px solid black;
   }
   
   .item:nth-of-type(1){
@@ -136,7 +137,7 @@ nav .nav-link {
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  
+
   }
   
   .item:nth-of-type(2){
@@ -264,12 +265,12 @@ nav .nav-link {
     width: 12px;        /* Ancho del input */
     height: 12px;       /* Altura del input */
     border-radius: 50%; /* Hacerlo circular */
-    border: 1px solid var(--neon-secondary); /* Borde gris */
+    border: 1px solid rgba(145, 140, 140, 0.719); /* Borde gris */
     cursor: pointer;    /* Cursor tipo pointer para indicar que es clickeable */
     transition: background-color 0.3s ease; 
     
   } 
-  
+ 
   .espaciocont {
     flex: 1; /* Take up equal space as the image */
     padding: 2em; /* Spacing inside the content area */

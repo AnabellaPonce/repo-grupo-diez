@@ -1,31 +1,35 @@
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let celular = document.getElementById("celular").value;
+  let message = document.getElementById("message").value;
 
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
+  // Valido que el nombre tenga más de 3 letras y no contenga números ni caracteres especiales
+  let namePattern = /^[a-zA-ZáéíóúÁÉÍÓÚ\s]{3,}$/;
+  if (!namePattern.test(name)) {
+      alert("El nombre debe tener más de 3 letras y no debe contener números ni caracteres especiales");
+      return false;
+  }
+
+  // Valido formato de email
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+      alert("Por favor, ingrese un correo electrónico válido");
+      return false;
+  }
+
+  // Valido que el celular contenga solo números y tenga 10 dígitos
+  let celularPattern = /^\d{10}$/;
+  if (!celularPattern.test(celular)) {
+      alert("El número de celular debe contener solo números y tener 10 dígitos");
+      return false;
+  }
+
+  if (message === "") {
+      alert("Por favor, complete todos los campos");
+      return false;
+  } else {
+  console.log('enviar');
+      document.getElementById("form").submit();
+  }
+}

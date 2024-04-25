@@ -183,6 +183,11 @@ input:hover {
   color: var(--navbar-footer); ;
 }
 
+#submitButton:hover {
+  background-color: #262929;
+  color: #b222bf;
+}
+
 textarea {
   width: 600px;
   max-width: 600px;
@@ -225,8 +230,10 @@ textarea:hover {
 }
 .btnenv{
   background-color: var(--navbar-footer) ;
-  margin: -5px 0px 0px 0px;
+  margin: -5px 0px 10px 0px;
+  border-bottom: 4px solid #262929;
 }
+
 
 @keyframes gradient {
   0% { background-position: 0% 50%; }
@@ -248,6 +255,7 @@ label:hover{
 footer {
   height: 220px;
   background-color: #262929;
+  margin-top: 5rem;
 }
 
 .texto-footer {

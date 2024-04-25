@@ -94,6 +94,13 @@ nav .nav-link {
 
 /*NOSOTROS*/
 
+.nosotros-container{
+  margin: 0 auto;
+  margin-top: 25rem;
+  margin-bottom: 20rem;
+  display: flex;
+}
+
 .person {
   width: calc(50% - 20px);
   max-width: 300px;

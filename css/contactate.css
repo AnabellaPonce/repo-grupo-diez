@@ -14,9 +14,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-          "nav nav nav nav "
-          "header header header header "
-          "footer footer footer footer ";
+          "nav nav nav  "
+          "header header header "
+          "footer footer footer ";
     height: 100%;
     font-family: 'Lato', sans-serif;
     background-color: #fff;

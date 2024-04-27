@@ -79,6 +79,12 @@ nav .nav-link {
     min-height: 100%;
 }
 
+@media screen and (max-width: 600px) {
+    .header-video video {
+        background-position: center center;
+    }
+}
+
 .header-content {
     z-index: 1;
     margin: 0 auto;
@@ -105,16 +111,39 @@ nav .nav-link {
     gap: 2rem;
 }
 
+@media screen and (max-width: 780px) {
+    .eventos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .eventos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}
+
 .card {
     border: none;
 }
 
 .card img {
     max-width: 100%;
-    height: 100%;
+    height: 45rem;
     object-fit: cover;
     object-position: center;
 }
+
+@media screen and (max-width: 780px) {
+    .card img {
+        max-width: 100%;
+        height: 30rem;
+    }
+}
+
+
 
 .card h3 {
     background-color: var(--principal);
@@ -162,6 +191,13 @@ nav .nav-link {
     text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+
+    .quienes-somos p {
+        line-height: 1;
+    }
+}
+
 
 
 /* SERVICIOS */
@@ -189,6 +225,19 @@ nav .nav-link {
     grid-template-columns: repeat(4, 1fr);
 }
 
+@media screen and (max-width: 780px) {
+    .servicios-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .servicios-icons {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+
 .servicios-icons {
     text-align: center;
 }
@@ -211,7 +260,7 @@ nav .nav-link {
     text-align: center;
 }
 
-.ubicacion h3{
+.ubicacion h3 {
     display: inline-block;
     font-family: "DM Sans", sans-serif;
     font-weight: 900;
@@ -240,6 +289,21 @@ footer {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+ .texto-footer {
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+ }   
+}
+
+@media screen and (max-width: 390px) {
+    .texto-footer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        
+    }
 }
 
 footer p {

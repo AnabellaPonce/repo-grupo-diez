@@ -24,7 +24,6 @@ body {
   background-color: #f0f0f0;
 }
 
-
 /* CONTENEDOR */
 
 .container {
@@ -82,7 +81,6 @@ nav .nav-link {
   margin: 0 auto;
 }
 
-
 .header-content h1 {
   font-size: 5rem;
   font-family: "DM Sans", sans-serif;
@@ -91,22 +89,30 @@ nav .nav-link {
   font-style: normal;
 }
 
-
 /*NOSOTROS*/
 
-.nosotros-container{
+.nosotros-container {
   margin: 0 auto;
   margin-top: 25rem;
   margin-bottom: 20rem;
   display: flex;
 }
 
+@media screen and (max-width: 780px) {
+  .nosotros-container {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ }
+ 
+
 .person {
   width: calc(50% - 20px);
   max-width: 300px;
   margin: 10px;
   text-align: center;
-  
 }
 
 .person img {
@@ -127,10 +133,14 @@ nav .nav-link {
   margin: 0;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-weight: 400;
   font-style: normal;
   font-size: 1.6rem;
-  color:#B222BF;
+  color: #b222bf;
+}
+
+.person p span {
+  font-weight: 900;
 }
 
 @media (max-width: 600px) {
@@ -154,8 +164,22 @@ footer {
   background-color: #262929;
   color: #fff;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .texto-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .texto-footer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 
 footer p {
@@ -192,7 +216,6 @@ footer p {
   display: block;
 }
 
-
 .paginas-footer h3 {
   font-family: "DM Sans", sans-serif;
   font-weight: 900;
@@ -201,12 +224,9 @@ footer p {
   margin-bottom: 1rem;
 }
 
-
-.paginas-footer ul li{
+.paginas-footer ul li {
   list-style: none;
 }
-
-
 
 .paginas-footer a {
   text-decoration: none;

@@ -9,8 +9,8 @@ html {
   font-size: 62.5%; /* 1 Rem = 10px */
 }
 
-body {
-    display: grid;
+body{
+  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
@@ -21,7 +21,6 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: #fff;
     color: var(--texto);
-    
   }
   
   nav {
@@ -35,8 +34,6 @@ header {
 footer {
     grid-area: footer;
 }
-
-
 
 :root {--principal:#b222bf ; /* Color principal (rosa) */
   --separador: #f2f2f2; /* Color separador (blanco marfil) */
@@ -253,6 +250,7 @@ label:hover{
 /* FOOTER */
 
 footer {
+  width: 100%;
   height: 220px;
   background-color: #262929;
   margin-top: 5rem;
@@ -374,23 +372,179 @@ footer p {
 
 
 /*media querys*/
-
-@media (min-width: 300px) and (max-width: 500px) {
+/**/
+@media only screen and (max-width: 430px) {
   
-    nav{
-      width: 41%;
-    }
-  header{
+   header, footer{
+    width: 99%; 
+  }
+  .contactanos{
+   width: 90%;
+  }
+  #tc{
+    size: 50%;
+   }
+  .cform{
+  position: relative;
+  width: 350px;
+  margin: 20px auto 100px auto;
+  text-align: center;
+  }
+ 
+  #form{
+    width:110%;
+  }
+
+ .cform-input
+ .cform textarea,
+ .btnenv{
+width: 100%; 
+max-width: 100%;
+box-sizing: border-box; 
+margin-bottom: 1px; 
+margin-left: -10%;
+}
+.cform-input{
+width: 100%;
+}
+.cform textarea{
+  width:94%;
+  margin-left:0px;
+}
+.btnenv{
+width:54%;
+margin-left:88px;
+}
+#submit{
+  width: 100%;
+}
+  nav{
+    width: 85%;
+  }
+  .texto-footer{
     width: 99%;
+    display: contents;
+    gap: 0px;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  & .eventos-footer{
+    background-color: #262929;
+    display: inline block;
+    margin: 0;
+    gap: 0px;
+    margin-top:-10px;
+
+  }
+  & .paginas-footer{
+    background-color: #262929;
+    gap: 0px;
+    margin-top:0px;
+  }
+  & .seguinos-footer{
+    background-color: #262929;
+    margin-top:-10px;
+  }
+  #miiframe{
+    width: 75%;
+    height: 50%;
+    top: 35%;
+    margin:20px;
+  }
+  }
+
+
+  @media only screen and (min-width:431px)and (max-width: 700px)
+   {
+     header, footer{
+      width: 99%; 
     }
     .contactanos{
-      width: 90%;
-      font-size: 150%;
-  }
-  
-  #miiframe{
-    display: none;
-  }
+     width: 90%;
+    }
+    #tc{
+      size: 50%;
+     }
+    .cform{
+      width: 99%;
+      max-width: none;
+      margin: 0;
+      padding: 10px; 
+      box-sizing: border-box; 
+      justify-content: left;
+      position: relative;
+    }
+     #form{
+       width:60%;
+     }
+    .containerform{
+      width: 450px;
+      position:relative;
+      height: 50rem;
+      padding:40px;
+    }
+
+   .cform-input
+   .cform textarea {
+  width: 100%; 
+  max-width: 100%;
+  box-sizing: border-box; 
+  margin-bottom: 1px; 
+}
+.cform-input{
+  width: 170%;
+  margin-left:-60px;
+  padding:30px;
+}
+.cform textarea{
+  width:216%;
+  margin-left:-80px;
+}
+.btnenv{
+  width:120%;
+  margin-left:-23px;
 }
 
+#submit{
+  width: 100%;
+}
 
+    nav{
+      width: 100%;
+    }
+    .texto-footer{
+      width: 99%;
+      display: contents;
+      gap: 0px;
+      justify-content: center; 
+      align-items: center; 
+    }
+
+    & .eventos-footer{
+      background-color: #262929;
+      margin-top:-10px;
+    
+    }
+    & .paginas-footer{
+      background-color: #262929;
+      margin-top:0.5px
+    
+    }
+    & .seguinos-footer{
+      background-color: #262929;
+      margin-top:-10.6px;
+    }
+    #miiframe{
+      width: 75%;
+      height: 50%;
+      top: 35%;
+      margin-left:20px;
+
+      
+    }
+  }
+     
+
+
+ 

@@ -343,7 +343,7 @@ width: 65%;
 max-width: 1200px;
 margin: 50px auto; /* Aumenta el margen superior si es necesario para asegurar el espacio con el contenido anterior */
 background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5));
-border: 3px solid red;
+
 }
 
 

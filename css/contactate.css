@@ -324,8 +324,9 @@ footer p {
 }
 
 
-.paginas-footer ul li{
-  list-style: none;
+.links-footer {
+  display: flex;
+  flex-direction: column;
 }
 
 

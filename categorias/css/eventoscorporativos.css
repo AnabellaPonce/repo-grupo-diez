@@ -133,7 +133,7 @@ nav .nav-link {
   
   .item:nth-of-type(1){
   --offset: 1;
-  background-image: url('/img/corp1.jpg');
+  background-image: url('../../img/corp1.jpg');
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -142,7 +142,7 @@ nav .nav-link {
   
   .item:nth-of-type(2){
   --offset: 2;
-  background-image: url('/img/corp2.jpg');/*imagen*/
+  background-image: url('../../img/corp2.jpg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ nav .nav-link {
   
   .item:nth-of-type(3){
   --offset: 3;
-  background-image: url('/img/corp3.jpeg');/*imagen*/
+  background-image: url('../../img/corp3.jpeg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -160,7 +160,7 @@ nav .nav-link {
   
   .item:nth-of-type(4){
   --offset: 4;
-  background-image: url('/img/corp4.jpg');/*imagen*/
+  background-image: url('../../img/corp4.jpg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -169,7 +169,7 @@ nav .nav-link {
   
   .item:nth-of-type(5){
   --offset: 5;
-  background-image: url('/img/corp5.jpg');/*imagen*/
+  background-image: url('../../img/corp5.jpg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -177,7 +177,7 @@ nav .nav-link {
   }
   .item:nth-of-type(6){
   --offset: 6;
-  background-image: url('/img/corp6.jpg');/*imagen*/
+  background-image: url('../../img/corp6.jpg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -185,7 +185,7 @@ nav .nav-link {
   }
   .item:nth-of-type(7){
   --offset: 7;
-  background-image: url('/img/corp7.jpg');/*imagen*/
+  background-image: url('../../img/corp7.jpg');/*imagen*/
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
@@ -434,28 +434,28 @@ nav .nav-link {
   }
   
   .card:nth-of-type(1):before {
-    background-image: url('/img/corporativo\ 1.jpg');
+    background-image: url('../../img/corporativo1.jpg');
   }
   
   .card:nth-of-type(2):before {
-    background-image: url('/img/corporativo2.jpg');
+    background-image: url('../../img/corporativo2.jpg');
   }
   
   .card:nth-of-type(3):before {
   
-  background-image: url('/img/corporativo\ 3.jpg');
+  background-image: url('../../img/corporativo3.jpg');
   }
   
   .card:nth-of-type(4):before {
-    background-image: url('/img/corporativo\ 4.jpg');
+    background-image: url('../../img/corporativo4.jpg');
   }
   
   .card:nth-of-type(5):before {
-    background-image: url('/img/corporativo\ 5.jpg');
+    background-image: url('../../img/corporativo5.jpg');
   }
   
   .card:nth-of-type(6):before {
-    background-image: url('/img/corporativo\ 6.jpg');
+    background-image: url('../../img/corporativo6.jpg');
   }
   
   @media (min-width: 600px) {

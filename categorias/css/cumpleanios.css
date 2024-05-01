@@ -134,7 +134,7 @@
    
    .item:nth-of-type(1){
    --offset: 1;
-   background-image: url('../../img/cumple1.jpg');
+   background-image: url('/img/cumple1.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -143,7 +143,7 @@
    
    .item:nth-of-type(2){
    --offset: 2;
-   background-image: url('../../img/cumple2.jpg');
+   background-image: url('/img/cumple2.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -153,7 +153,7 @@
    
    .item:nth-of-type(3){
    --offset: 3;
-   background-image: url('../../img/cumple3.jpg');
+   background-image: url('/img/cumple3.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -162,7 +162,7 @@
    
    .item:nth-of-type(4){
    --offset: 4;
-   background-image: url('../../img/cumple4.jpg');
+   background-image: url('/img/cumple\ 4.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -171,7 +171,7 @@
    
    .item:nth-of-type(5){
    --offset: 5;
-   background-image: url('../../img/cumple5.jpg');
+   background-image: url('/img/cumple5.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -179,7 +179,7 @@
    }
    .item:nth-of-type(6){
    --offset: 6;
-   background-image: url('../../img/cumple6.jpg');
+   background-image: url('/img/cumple6.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -187,7 +187,7 @@
    }
    .item:nth-of-type(7){
    --offset: 7;
-   background-image: url('../../img/cumple7.jpg');
+   background-image: url('/img/cumple7.jpg');
    background-size: cover;
    background-position: 0px 0px;
    background-repeat: no-repeat;
@@ -436,28 +436,28 @@
    }
    
    .card:nth-of-type(1):before {
-     background-image: url('../../img/cumpleaños1.jpg');
+     background-image: url('/img/cumpleaños\ 1.jpg');
    }
    
    .card:nth-of-type(2):before {
-     background-image: url('../../img/cumpleaños2.jpg');
+     background-image: url('/img/cumpleaños\ 2.jpg');
    }
    
    .card:nth-of-type(3):before {
    
-   background-image: url('../../img/cumpleaños3.jpg');
+   background-image: url('/img/cumpleaños\ 3.jpg');
    }
    
    .card:nth-of-type(4):before {
-     background-image: url('../../img/cumpleaños4.jpg');
+     background-image: url('/img/cumpleaños\ 4.jpg');
    }
    
    .card:nth-of-type(5):before {
-     background-image: url('../../img/cumpleaños5.jpg');
+     background-image: url('/img/cumpleaños\ 5.jpg');
    }
    
    .card:nth-of-type(6):before {
-     background-image: url('../../img/cumpleaños6.jpg');
+     background-image: url('/img/cumpleaños\ 6.jpg');
    }
    
    @media (min-width: 600px) {

@@ -133,7 +133,7 @@ nav .nav-link {
   
   .item:nth-of-type(1){
     --offset: 1;
-    background-image: url('../../img/15a.jpg');
+    background-image: url('/img/15a.jpg');
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -142,7 +142,7 @@ nav .nav-link {
     
     .item:nth-of-type(2){
     --offset: 2;
-    background-image: url('../../img/15b.jpg');/*imagen*/
+    background-image: url('/img/15b.jpg');/*imagen*/
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ nav .nav-link {
     
     .item:nth-of-type(3){
     --offset: 3;
-    background-image: url('../../img/15c.jpg');/*imagen*/
+    background-image: url('/img/15c.jpg');/*imagen*/
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ nav .nav-link {
     
     .item:nth-of-type(4){
     --offset: 4;
-    background-image: url('../../img/uno.jpg');
+    background-image: url('/img/15\ uno.jpg');
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@ nav .nav-link {
     
     .item:nth-of-type(5){
     --offset: 5;
-    background-image: url('../../img/15e.jpg');/*imagen*/
+    background-image: url('/img/15e.jpg');/*imagen*/
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -177,7 +177,7 @@ nav .nav-link {
     }
     .item:nth-of-type(6){
     --offset: 6;
-    background-image: url('../../img/15f.jpg');/*imagen*/
+    background-image: url('/img/15f.jpg');/*imagen*/
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -185,7 +185,7 @@ nav .nav-link {
     }
     .item:nth-of-type(7){
     --offset: 7;
-    background-image: url('../../img/dos.jpg');/*imagen*/
+    background-image: url('/img/15\ dos.jpg');/*imagen*/
     background-size: cover;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -434,28 +434,28 @@ nav .nav-link {
   }
   
   .card:nth-of-type(1):before {
-    background-image: url('../../img/quince1.jpg');
+    background-image: url('/img/quince1.jpg');
   }
   
   .card:nth-of-type(2):before {
-    background-image: url('../../img/quince2.jpg');
+    background-image: url('/img/quince2.jpg');
   }
   
   .card:nth-of-type(3):before {
   
-  background-image: url('../../img/quince3.jpg');
+  background-image: url('/img/quince3.jpg');
   }
   
   .card:nth-of-type(4):before {
-    background-image: url('../../img/quince4.jpg');
+    background-image: url('/img/quince4.jpg');
   }
   
   .card:nth-of-type(5):before {
-    background-image: url('../../img/quince5.jpg');
+    background-image: url('/img/quince\ 5.jpg');
   }
   
   .card:nth-of-type(6):before {
-    background-image: url('../../img/quince6.jpg');
+    background-image: url('/img/quince6.jpg');
   }
   
   @media (min-width: 600px) {

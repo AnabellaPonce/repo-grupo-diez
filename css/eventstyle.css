@@ -102,7 +102,7 @@ nav .nav-link {
   height: 115vh;
   grid-template-columns: 1.15fr 2.70fr 1.15fr; /* Configuración de las columnas */
   gap: 0px; /* Espacio entre las columnas */
-  margin-top: -10px;
+  margin: 0;
   padding: 0; /* Elimina cualquier padding */
   background-image:linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5)),url(https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg);
   background-size: cover;

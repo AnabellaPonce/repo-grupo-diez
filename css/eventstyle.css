@@ -16,15 +16,17 @@ body {
   overflow-x: hidden;
   display: grid;
   grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "section"
-    "footer";
-  grid-template-rows: auto 1fr auto auto auto; /* Alturas adaptativas según el contenido */
+    "nav nav nav "
+    "header header header"
+    "main main main "
+    "section section section "
+    "footer footer footer";
+  grid-template-rows: auto 1fr auto auto auto; 
   min-height: 100vh;
-  gap: 10px; /* Espacio entre las secciones */
+  gap: 10px; 
   flex-wrap: wrap;
+
+ 
 
 }
 nav {

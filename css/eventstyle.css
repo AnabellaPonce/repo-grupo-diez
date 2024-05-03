@@ -692,16 +692,16 @@ footer p {
 
   @media only screen and (min-width:300px) and (max-width: 550px){
 
-  header{
-    justify-items: stretch;
-    justify-content: center;
-    align-items: stretch;
-    width: 50%;
-    align-content: center;
-    grid-template-columns: 1fr;
-   & .mo , .ev {
-    display: none;
-   }
-  }
-
-  }
+    header{
+      justify-items: stretch;
+      justify-content: center;
+      align-items: stretch;
+      width: 50%;
+      align-content: center;
+      grid-template-columns: 1fr;
+     & .mo , .ev {
+      display: none;
+     }
+    }
+  
+    }

@@ -264,14 +264,17 @@ nav .nav-link {
 }
 
 @media screen and (max-width: 390px) {
-    .ubicacion {
+    iframe {
         max-width: 100%;
+        height: auto;
     }
 }
 
+
 @media screen and (max-width: 780px) {
-    .ubicacion {
+    iframe {
         max-width: 100%;
+        height: auto;
     }
 }
 

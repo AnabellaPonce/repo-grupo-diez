@@ -266,7 +266,7 @@ nav .nav-link {
 @media screen and (max-width: 390px) {
     iframe {
         max-width: 100%;
-        height: auto;
+        height: 200px
     }
 }
 
@@ -274,7 +274,7 @@ nav .nav-link {
 @media screen and (max-width: 780px) {
     iframe {
         max-width: 100%;
-        height: auto;
+        height: 400px;
     }
 }
 

@@ -260,6 +260,19 @@ nav .nav-link {
     margin-top: 20rem;
     background-color: var(--separador);
     text-align: center;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 390px) {
+    .ubicacion {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .ubicacion {
+        max-width: 100%;
+    }
 }
 
 .ubicacion h3 {

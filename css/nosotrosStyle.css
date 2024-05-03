@@ -84,7 +84,6 @@ nav .nav-link {
 .header-content h1 {
   font-size: 5rem;
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
 }
@@ -132,7 +131,6 @@ nav .nav-link {
 .person p {
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 1.6rem;

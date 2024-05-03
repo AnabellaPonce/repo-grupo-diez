@@ -502,10 +502,10 @@ nav .nav-link {
       hsla(0, 0%, 0%, 0.468) 69.3%,
       hsla(0, 0%, 0%, 0.468)74.1%,
       hsla(0, 0%, 0%, 0.468) 78.8%,
-      hsla(0, 0%, 0%, 0.607)83.6%,
-      hsla(0, 0%, 0%, 0.607) 88.7%,
-      hsla(0, 0%, 0%, 0.607)94.1%,
-      hsla(0, 0%, 0%, 0.712)100%
+      hsla(0, 0%, 0%, 0.468)83.6%,
+      hsla(0, 0%, 0%, 0.468)88.7%,
+      hsla(0, 0%, 0%, 0.468)94.1%,
+      hsla(0, 0%, 0%, 0.468)100%
     );/* Capa oscurecedora */
     transition: transform 0.5s ease-in-out, background-image 0.5s ease-in-out;
     pointer-events: none; /* Para no interferir con otros elementos de la tarjeta */

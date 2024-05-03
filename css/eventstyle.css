@@ -23,10 +23,8 @@ body {
     "footer footer footer";
   grid-template-rows: auto 1fr auto auto auto; 
   min-height: 100vh;
-  gap: 10px; 
+  gap:0; 
   flex-wrap: wrap;
-
- 
 
 }
 nav {
@@ -35,6 +33,9 @@ nav {
 
 header {
   grid-area: header;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -666,7 +667,243 @@ footer p {
   font-size: 1.1rem;
 }
 
+ 
+  
+/* Media query para pantallas con un máximo de 480px de ancho */
+@media only screen and (min-width:300px)and (max-width: 450px){
+  body {
+      display: flex;
+      gap: 2px;
+  }
+
+  nav, header, main, section, footer {
+      grid-area: unset; /* Remover la asignación de áreas de la cuadrícula */
+      width: 100%; /* Asegurar que cada sección ocupe el ancho completo */
+      padding: 10px 5px; /* Agregar algo de padding para facilitar la interacción táctil */
+  }
+nav{
+  width:100%;
+}
+  .nav-link, .navbar-brand {
+      font-size: 1.2rem; /* Disminuir el tamaño de fuente para optimizar el espacio */
+  }
+  .mo , .ev{
+    display:none;
+  }
+  .logo-navbar {
+      width: 60px; /* Reducir aún más el tamaño del logo */
+      height: 20px;
+  }
+
+  .grid-container {
+      display: block; /* Cambiar la disposición a bloque para simplificar */
+      height: auto;
+      padding: 0; /* Reducir o eliminar el padding */
+  }
+
+  .grid-item {
+      flex-direction: column;
+      padding: 2px; /* Ajustar el padding */
+  }
+
+  .vintalight__container {
+      max-width: 65%; /* Ajustar el ancho al máximo disponible */
+      transform: none; /* Eliminar las transformaciones */
+      margin: 2px 0; /* Simplificar los márgenes */
+  }
+
+  .vintalight__photo::before {
+      font-size: 0.5em; /* Reducir aún más el tamaño de la fuente del overlay */
+  }
+
+  .vintalight__container:hover {
+      transform: scale(1.05); /* Reducir el efecto de escala al pasar el ratón */
+  }
+  .event-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    gap: 1rem;
+    padding: 3px;
+    width: 100%;
+    margin: 3px auto;
+  }
+  #eccard{
+    padding:8px
+  }
+  
+  .form{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    padding:0px;
+    margin-left:0px;
+    width:100%;
+  }
+  .contact-form-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    width: 99%;
+    margin-left: -1px;
+  }
+  .contact-form-inputs{
+    width: 80%;
+  }
+
+footer{
+  background-color: #262929;
+  height:47rem;
+}
+.texto-footer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+footer p {
+text-align: center;
+color: white;
+margin: 0;
+font-size: 1.3rem;
+font-family: "Lato", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.direccion-footer h3 {
+font-family: "DM Sans", sans-serif;
+font-weight: 900;
+font-size: 2rem;
+color: var(--principal);
+margin-bottom: 1rem;
+}
+
+.direccion-footer {
+display: block;
+}
+
+.eventos-footer h3 {
+font-family: "DM Sans", sans-serif;
+font-weight: 900;
+font-size: 2rem;
+color: var(--principal);
+margin-bottom: 1rem;
+}
+
+.eventos-footer {
+display: block;
+width: 100%;
+margin-left: 1px;
+}
+
+
+.paginas-footer h3 {
+font-family: "DM Sans", sans-serif;
+font-weight: 900;
+font-size: 2rem;
+color: var(--principal);
+margin-bottom: 1rem;
+}
+
+
+.links-footer {
+display: flex;
+flex-direction: column;
+}
+
+
+.paginas-footer a {
+text-decoration: none;
+color: #fff;
+font-family: "Lato", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.3rem;
+}
+
+.seguinos-footer h3 {
+font-family: "DM Sans", sans-serif;
+font-weight: 900;
+font-size: 2rem;
+color: var(--principal);
+margin-bottom: 1rem;
+}
+
+.iconos-footer {
+font-size: 1.8rem;
+}
+
+.iconos-footer a {
+color: #fff;
+padding-right: 0.5rem;
+}
+
+.copyright {
+background-color: #262929;
+}
+
+.texto-copy {
+padding-top: 2rem;
+}
+
+.copyright p {
+color: #fff;
+font-size: 1.1rem;
+}
+
+}
+  
+
 /* Media Query para tablets */
+@media only screen and (min-width:451px)and (max-width: 800px) {
+  body {
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "section"
+      "footer";
+    grid-template-rows: 40px auto 1fr auto auto; /* Ajustes específicos para dispositivos móviles */
+  }
+
+  .grid-container {
+    display: grid; /* Cambiar la disposición a bloque para simplificar */
+     height: auto;
+     padding: 0;
+     grid-template-columns: 15% 70% 15%; /* Ajusta las proporciones de las columnas */
+     gap: 0; 
+   
+}
+
+.grid-item {
+    flex-direction: column;
+    padding: 2px; /* Ajustar el padding */
+}
+
+
+
+.vintalight__container {
+  max-width: 24%; /* Ajustar el ancho al máximo disponible */
+  transform: none; /* Eliminar las transformaciones */
+  margin: 2px 0; /* Simplificar los márgenes */
+}
+
+.vintalight__photo::before {
+  font-size: 0.5em; /* Reducir aún más el tamaño de la fuente del overlay */
+}
+
+.vintalight__container:hover {
+  transform: scale(1.05); /* Reducir el efecto de escala al pasar el ratón */
+}
+.vintalight__container:nth-child(1) {
+  transform: translate(0px, 50px) rotate(-30deg);
+  z-index: 40;
+}
+
+footer{
+  background-color: #262929;
+  width: 105rem;
+}
+
+}
+
 @media (max-width: 1024px) {
   body {
     grid-template-areas:
@@ -677,31 +914,48 @@ footer p {
       "footer";
     grid-template-rows: 55px auto 1fr auto auto; /* Ajustes específicos para tabletas */
   }
+  .grid-container {
+    display: grid; /* Cambiar la disposición a bloque para simplificar */
+     height: auto;
+     padding: 0;
+     grid-template-columns: 15% 70% 15%; /* Ajusta las proporciones de las columnas */
+     gap: 0; 
+   
 }
-  @media (max-width: 768px) {
-    body {
-      grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "section"
-        "footer";
-      grid-template-rows: 45px auto 1fr auto auto; /* Ajustes específicos para dispositivos móviles */
-    }
-  } 
+.vintalight__container:nth-child(1) {
+  transform: translate(-10px, 50px) rotate(-30deg);
+  z-index: 40;
+}
+}
+@media only screen and (min-width:1700px)and (max-width: 2300px) {
 
-  @media only screen and (min-width:300px) and (max-width: 550px){
+  body {
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "section"
+      "footer";
+    grid-template-rows: 55px auto 1fr auto auto; /* Ajustes específicos para tabletas */
+  }
+  .grid-container {
+    display: grid; /* Cambiar la disposición a bloque para simplificar */
+     height: auto;
+     padding: 0;
+     grid-template-columns: 15% 70% 15%; /* Ajusta las proporciones de las columnas */
+     gap: 0; 
+   
+}
+.vintalight__container:nth-child(1) {
+  transform: translate(-10px, 50px) rotate(-30deg);
+  z-index: 40;
+}
+.event-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+  gap: 2rem;
+  width: 100%;
+  margin: 50px auto;
+}
 
-    header{
-      justify-items: stretch;
-      justify-content: center;
-      align-items: stretch;
-      width: 50%;
-      align-content: center;
-      grid-template-columns: 1fr;
-     & .mo , .ev {
-      display: none;
-     }
-    }
-  
-    }
+}

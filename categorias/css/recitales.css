@@ -491,12 +491,12 @@ background-image: url('../../img/area-rock.jpg');
     hsla(0, 0%, 0%, 0.320) 58.9%,
     hsla(0, 0%, 0%, 0.394) 64.3%,
     hsla(0, 0%, 0%, 0.468) 69.3%,
-    hsla(0, 0%, 0%, 0.61) 74.1%,
-    hsla(0, 0%, 0%, 0.607) 78.8%,
-    hsla(0, 0%, 0%, 0.712) 83.6%,
-    hsla(0, 0%, 0%, 0.721) 88.7%,
-    hsla(0, 0%, 0%, 0.904) 94.1%,
-    hsla(0, 0%, 0%, 0.904) 100%
+    hsla(0, 0%, 0%, 0.468)74.1%,
+    hsla(0, 0%, 0%, 0.468) 78.8%,
+    hsla(0, 0%, 0%, 0.468)83.6%,
+    hsla(0, 0%, 0%, 0.468)88.7%,
+    hsla(0, 0%, 0%, 0.468)94.1%,
+    hsla(0, 0%, 0%, 0.468)100%
   );/* Capa oscurecedora */
   transition: transform 0.5s ease-in-out, background-image 0.5s ease-in-out;
   pointer-events: none; /* Para no interferir con otros elementos de la tarjeta */
@@ -688,3 +688,6 @@ footer p {
   color: #fff;
   font-size: 1.1rem;
 }
+
+
+

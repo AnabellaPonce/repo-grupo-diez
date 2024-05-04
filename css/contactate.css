@@ -380,7 +380,7 @@ footer p {
 /**/
 
 
-@media only screen and (min-width:300px)and (max-width: 430px){
+@media only screen and (min-width:300px)and (max-width: 450px){
   
     header{
      height: 70rem;
@@ -389,9 +389,7 @@ footer p {
    .contactanos{
     width: 90%;
    }
-   #tc{
-     size: 50%;
-    }
+  
    .cform{
    position: relative;
    width: 350px;
@@ -464,7 +462,7 @@ footer p {
    }
 
 
-  @media only screen and (min-width:431px)and (max-width: 700px)
+   @media only screen and (min-width:451px)and (max-width: 800px)
    {
      header, footer{
       width: 100%; 
@@ -485,10 +483,10 @@ footer p {
       position: relative;
     }
      #form{
-       width:60%;
+       width:90%;
      }
     .containerform{
-      width: 450px;
+      width: 500px;
       position:relative;
       height: 50rem;
       padding:40px;
@@ -502,17 +500,14 @@ footer p {
   margin-bottom: 1px; 
 }
 .cform-input{
-  width: 170%;
   margin-left:-60px;
   padding:30px;
 }
 .cform textarea{
-  width:216%;
-  margin-left:-80px;
+  margin-left:-60px;
 }
 .btnenv{
-  width:120%;
-  margin-left:-23px;
+  width:91%;
 }
 
 #submit{
@@ -615,3 +610,9 @@ footer p {
 
 
  
+
+
+
+
+
+

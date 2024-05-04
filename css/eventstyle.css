@@ -1,4 +1,3 @@
-/* Import de fuentes */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto');
 * {
     margin: 0;
@@ -7,7 +6,7 @@
   
 }
 html {
-  font-size: 62.5%; /* 1 Rem = 10px */
+  font-size: 62.5%;
 }
 
 
@@ -76,12 +75,12 @@ nav .nav-link {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      padding: 0; /* Elimina cualquier padding */
+      padding: 0; 
   }
 
   
   :root {
-    --size: 2rem; /* Reducir si es necesario para que se ajuste al diseño */
+    --size: 2rem; 
     --resize: 0.4;
     --fig-width: 9em; /* Ancho de las figuras como porcentaje de la cuadrícula del contenedor */
     --fig-height: 12em; /* La altura se ajusta para mantener la proporción de las imágenes */
@@ -118,24 +117,24 @@ nav .nav-link {
   color: white;
   margin: 0;
   gap:0px;
-  padding: 0; /* Elimina cualquier padding */
+  padding: 0; 
   flex-direction: column-reverse;
 }
 
 .grid-item.center {
   flex: 0 0 auto; /* No crece ni se encoge */
-  width: calc(100% - 0rem); /* Ajusta el ancho teniendo en cuenta el padding */
-  height: 100%; /* Altura automática según el contenido, ajustar si es necesario */
-  position: relative; /* Establece como relativo para z-index si es necesario */
-  z-index: 1; /* Asegúrate de que no esté detrás de otros elementos */
+  width: calc(100% - 0rem); 
+  height: 100%; 
+  position: relative; 
+  z-index: 1; 
   overflow: hidden; /* Evita que el contenido interno se desborde */
   gap: 0px;
 }
 
 .grid-item.left, .grid-item.right {
-  font-size: 46px; /* Tamaño de fuente aumentado */
-  font-weight: bold; /* Hace el texto más ancho */
-  animation:fadeInOut 4s ease-in-out infinite; /* Aumentamos la duración y suavizamos la curva de velocidad */ 
+  font-size: 46px; 
+  font-weight: bold; 
+  animation:fadeInOut 4s ease-in-out infinite; 
   justify-content: center;
   align-items: center;
   background-size: 500px 950px;
@@ -150,8 +149,6 @@ nav .nav-link {
       opacity: 1;
   }
 }
-
-/*background-image: linear-gradient(rgba(7, 14, 21, 0.5), rgba(7, 14, 21, 0.5)),url(https://t4.ftcdn.net/jpg/01/18/95/07/360_F_118950777_Cay1sgFONNyTzfINFYjgOD3YuLfN6zy8.jpg) ; url(https://images.pexels.com/photos/18741663/pexels-photo-18741663/free-photo-of-fuegos-artificiales-valencia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) */
 
 .mo {
   transform:rotate(-45deg); /* Inclinación hacia la izquierda para 'mo' */
@@ -210,13 +207,13 @@ nav .nav-link {
 }
  
 .grid-item.left {
-  grid-column: 1 / 2; /* Ajuste según la necesidad de la disposición del grid */
-  background-position: center; /* Alinea la imagen de fondo hacia la izquierda y centra verticalmente */
+  grid-column: 1 / 2; 
+  background-position: center; 
 }
 
 
 .grid-item.right {
-  grid-column: 3 / 4; /* Asegúrate de que esto se coloca correctamente en tu layout de grid */
+  grid-column: 3 / 4; 
   background-position: center; /* Alinea la imagen de fondo hacia la derecha y centra verticalmente */
 }
 
@@ -307,7 +304,7 @@ nav .nav-link {
 .vintalight__container:nth-child(5) {
 
   transform: translate(30px, 15px) rotate(-25deg); /* Ajusta la translación y rotación */
-  z-index: 20; /* Mantén el z-index como está o ajusta según sea necesario */
+  z-index: 20; 
   
 }
 
@@ -678,8 +675,8 @@ footer p {
 
   nav, header, main, section, footer {
       grid-area: unset; /* Remover la asignación de áreas de la cuadrícula */
-      width: 100%; /* Asegurar que cada sección ocupe el ancho completo */
-      padding: 10px 5px; /* Agregar algo de padding para facilitar la interacción táctil */
+      width: 100%; 
+      padding: 10px 5px; 
   }
 nav{
   width:100%;
@@ -698,12 +695,12 @@ nav{
   .grid-container {
       display: block; /* Cambiar la disposición a bloque para simplificar */
       height: auto;
-      padding: 0; /* Reducir o eliminar el padding */
+      padding: 0; 
   }
 
   .grid-item {
       flex-direction: column;
-      padding: 2px; /* Ajustar el padding */
+      padding: 2px; 
   }
 
   .vintalight__container {
@@ -721,7 +718,7 @@ nav{
   }
   .event-cards{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1rem;
     padding: 3px;
     width: 100%;
@@ -733,14 +730,14 @@ nav{
   
   .form{
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    grid-template-columns: repeat(1, 1fr); 
     padding:0px;
     margin-left:0px;
     width:100%;
   }
   .contact-form-container{
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+    grid-template-columns: repeat(1, 1fr); 
     width: 99%;
     margin-left: -1px;
   }
@@ -860,7 +857,7 @@ font-size: 1.1rem;
       "main"
       "section"
       "footer";
-    grid-template-rows: 40px auto 1fr auto auto; /* Ajustes específicos para dispositivos móviles */
+    grid-template-rows: 40px auto 1fr auto auto; 
   }
 
   .grid-container {
@@ -874,7 +871,7 @@ font-size: 1.1rem;
 
 .grid-item {
     flex-direction: column;
-    padding: 2px; /* Ajustar el padding */
+    padding: 2px; 
 }
 
 
@@ -886,7 +883,7 @@ font-size: 1.1rem;
 }
 
 .vintalight__photo::before {
-  font-size: 0.5em; /* Reducir aún más el tamaño de la fuente del overlay */
+  font-size: 0.5em; 
 }
 
 .vintalight__container:hover {
@@ -952,7 +949,7 @@ footer{
 }
 .event-cards{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Dos tarjetas por fila en pantallas medianas */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 2rem;
   width: 100%;
   margin: 50px auto;

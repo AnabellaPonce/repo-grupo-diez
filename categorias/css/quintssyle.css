@@ -65,9 +65,10 @@ nav .nav-link {
     overflow: hidden; /* Ensures the child elements do not overflow */
     display: flex;
     flex-direction: row-reverse; /* Align items horizontally and reverse the order */
-    width: 99%;
+    width: 96%;
     max-width: 950%; /* Max width with some space on the sides */
     margin-top: 55px; /* Add some space on the top */
+    margin-left: 2%;
     background-color:#f2f2f2;
     height: 83vh;
     padding: 1px;
@@ -97,7 +98,7 @@ nav .nav-link {
   justify-items: center;
   }
   
-  main#items-carrusel{
+  div#items-carrusel{
   width: 47vw;
   height: 45vh;
   grid-row: 1 / 2;
@@ -193,13 +194,16 @@ nav .nav-link {
 
   }
   
-  
+  .si{
+    display: none;
+  }
+
   input:nth-of-type(1){
   grid-column: 2 / 3;
   grid-row: 2;
   }
   
-  input:nth-of-type(1):checked ~ main#items-carrusel{
+  input:nth-of-type(1):checked ~ div#items-carrusel{
   --posicion: 1;
   
   }
@@ -209,7 +213,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(2):checked ~ main#items-carrusel{
+  input:nth-of-type(2):checked ~ div#items-carrusel{
   --posicion: 2;
   }
   
@@ -218,7 +222,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(3):checked ~ main#items-carrusel{
+  input:nth-of-type(3):checked ~ div#items-carrusel{
   --posicion: 3;
   }
   
@@ -227,7 +231,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(4):checked ~ main#items-carrusel{
+  input:nth-of-type(4):checked ~ div#items-carrusel{
   --posicion: 4;
   }
   
@@ -236,7 +240,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(5):checked ~ main#items-carrusel{
+  input:nth-of-type(5):checked ~ div#items-carrusel{
   --posicion: 5;/*como dice position no lo leía position: 5;*/
   }
   /*Faltaba ubicar el 6 input*/
@@ -245,7 +249,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(6):checked ~ main#items-carrusel{
+  input:nth-of-type(6):checked ~ div#items-carrusel{
   --posicion: 6;
   }
   input:nth-of-type(7){
@@ -253,7 +257,7 @@ nav .nav-link {
   grid-row: 2;
   }
   
-  input:nth-of-type(7):checked ~ main#items-carrusel{
+  input:nth-of-type(7):checked ~ div#items-carrusel{
   --posicion: 7;
   }
   
@@ -298,7 +302,7 @@ nav .nav-link {
     padding-top: 1em; /* Space above the text */
     color: #131212; 
     font-family: lato !important;
-    font-size: 2em;
+    font-size: 1.8em;
   }
   
   .espacioscaracteristicas {
@@ -306,7 +310,7 @@ nav .nav-link {
     margin: 0;
     padding: 0;
     font-family: lato !important;
-    font-size: 1.7em;
+    font-size: 1.6em;
     
   }
   
@@ -420,9 +424,8 @@ nav .nav-link {
     padding: 1.1rem; /* Incrementa el padding para aumentar la altura */
     margin-bottom: 1rem; /* Añade espacio entre tarjetas */
     width: 100%; /* Ancho automático dentro del grid */
-    min-height: 400px; /* Altura mínima */
     max-width: 250px; /* Ancho máximo para cada tarjeta */
-    min-height: 300px; /* Altura mínima */
+    min-height: 320px; /* Altura mínima */
     text-align: center;
     color: #ffff; /* Cambia a un color muy oscuro para el texto */
      text-shadow: 
@@ -461,7 +464,12 @@ nav .nav-link {
   
   @media (min-width: 600px) {
     .card {
-      height: 350px;
+      height: 200px;
+    }
+  }
+  @media only screen and (min-width:300px)and (max-width: 450px){
+    .card{
+      height:80px;
     }
   }
   

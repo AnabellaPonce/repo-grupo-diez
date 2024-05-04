@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 62.5%; /* 1 Rem = 10px */
+  font-size: 62.5%; 
 }
 
 body{
@@ -96,7 +96,6 @@ input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
 
 }
 
-/* on hover placeholder */
 
 input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
   color: #262929;
@@ -281,7 +280,6 @@ footer p {
 
 .direccion-footer h3 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-size: 2rem;
   color: var(--principal);
@@ -306,7 +304,6 @@ footer p {
 
 .eventos-footer h3 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-size: 2rem;
   color: var(--principal);
@@ -320,7 +317,6 @@ footer p {
 
 .paginas-footer h3 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-size: 2rem;
   color: var(--principal);
@@ -346,7 +342,6 @@ footer p {
 
 .seguinos-footer h3 {
   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-size: 2rem;
   color: var(--principal);
@@ -377,7 +372,6 @@ footer p {
 
 
 /*media querys*/
-/**/
 
 
 @media only screen and (min-width:300px)and (max-width: 450px){
@@ -436,20 +430,20 @@ footer p {
      align-items: center; 
    }
  
-   & .eventos-footer{
+    .eventos-footer{
      background-color: #262929;
-     display: inline block;
+     display: block;
      margin: 0;
      gap: 0px;
      margin-top:-10px;
  
    }
-   & .paginas-footer{
+    .paginas-footer{
      background-color: #262929;
      gap: 0px;
      margin-top:0px;
    }
-   & .seguinos-footer{
+    .seguinos-footer{
      background-color: #262929;
      margin-top:-4px;
    }
@@ -470,9 +464,7 @@ footer p {
     .contactanos{
      width: 90%;
     }
-    #tc{
-      size: 50%;
-     }
+    
     .cform{
       width: 99%;
       max-width: none;

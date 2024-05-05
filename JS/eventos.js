@@ -166,6 +166,24 @@ function validateForm() {
     return false;
   }
 
+  const imageInput = document.getElementById("imageInput");
+  const file = imageInput.files[0];
+
+  if (!file) {
+    alert("Por favor seleccione un archivo.");
+    event.preventDefault();
+    return false;
+  }
+
+  const validExtensions = ["jpg", "jpeg", "png"];
+  const fileExtension = file.name.split(".").pop().toLowerCase();
+
+  if (!validExtensions.includes(fileExtension)) {
+    alert("Por favor seleccione una imagen en formato JPG o PNG.");
+    event.preventDefault();
+    return false;
+  }
+
   // Si todas las validaciones pasan, enviar el formulario
   return true;
 }

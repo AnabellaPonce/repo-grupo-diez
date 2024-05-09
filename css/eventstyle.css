@@ -704,9 +704,9 @@ nav{
   }
 
   .vintalight__container {
-      max-width: 65%; /* Ajustar el ancho al máximo disponible */
-      transform: none; /* Eliminar las transformaciones */
-      margin: 2px 0; /* Simplificar los márgenes */
+    max-width: 77%; /* Ajustar el ancho al máximo disponible */
+    transform: none; /* Eliminar las transformaciones */
+    margin: 1px 0; /* Simplificar los márgenes */
   }
 
   .vintalight__photo::before {
@@ -723,6 +723,12 @@ nav{
     padding: 3px;
     width: 100%;
     margin: 3px auto;
+   
+  }
+  #eccard{
+    margin:1px auto ;
+    padding: 8px;
+    font-size: 14.5px;
   }
 
   
@@ -738,9 +744,11 @@ nav{
     grid-template-columns: repeat(1, 1fr); 
     width: 99%;
     margin-left: -1px;
+    align-content: center;
   }
   .contact-form-inputs{
-    width: 80%;
+    width: 100%;
+    margin: auto;
   }
 
 footer{
